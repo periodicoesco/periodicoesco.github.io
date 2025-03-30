@@ -2,45 +2,137 @@
 <html class="wide wow-animation" lang="es">
   <head>
     <!-- Site Title-->
-    <title>Noticias</title>
+    <title>Noticias - La Francophonie</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <link rel="icon" href="/images/favicon.ico" type="/images/favicon.icon">
+    <meta name="description" content="Noticias sobre la Francophonie y su importancia cultural y lingüística">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <!-- Stylesheets-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic%7CJosefin+Sans:400,700,300italic">
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/style.css">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <style>
+      .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} 
+      html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
+      
+      /* Mejoras visuales */
+      .navbar-brand img { transition: opacity 0.3s ease; }
+      .navbar-brand:hover img { opacity: 0.8; }
+      
+      .social-icon {
+        transition: transform 0.3s ease, color 0.3s ease;
+      }
+      .social-icon:hover {
+        transform: translateY(-3px);
+      }
+      
+      .nav-link {
+        position: relative;
+        padding-bottom: 5px;
+      }
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #3498db;
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      
+      .breadcrumbs-custom {
+        position: relative;
+      }
+      .breadcrumbs-custom::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.5);
+      }
+      
+      .breadcrumbs-custom__path li:not(:last-child)::after {
+        content: '›';
+        margin: 0 10px;
+        color: #fff;
+      }
+      
+      .breadcrumbs-custom__path a {
+        transition: color 0.3s ease;
+      }
+      .breadcrumbs-custom__path a:hover {
+        color: #3498db;
+      }
+      
+      .card {
+        border: none;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 30px;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      }
+      
+      .img-rounded {
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      }
+      
+      .highlight-box {
+        background: #f8f9fa;
+        border-left: 4px solid #3498db;
+        padding: 20px;
+        margin: 30px 0;
+        border-radius: 0 8px 8px 0;
+      }
+      
+      .footer {
+        background: #2c3e50;
+        color: #fff;
+      }
+      
+      .form-control {
+        border-radius: 4px;
+        padding: 12px 15px;
+      }
+      
+      .btn-subscribe {
+        background: #3498db;
+        color: white;
+        border-radius: 4px;
+        padding: 12px 25px;
+        transition: all 0.3s ease;
+      }
+      .btn-subscribe:hover {
+        background: #2980b9;
+        transform: translateY(-2px);
+      }
+      
+      @media (max-width: 767px) {
+        .hero-title {
+          font-size: 2rem;
+        }
+        .card {
+          margin-bottom: 20px;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-    
-    <!-- Page Loader--
-      <div id="page-loader">
-        <div class="page-loader-body">
-          <div class="cssload-spinner">
-            <div class="cssload-cube cssload-cube0"></div>
-            <div class="cssload-cube cssload-cube1"></div>
-            <div class="cssload-cube cssload-cube2"></div>
-            <div class="cssload-cube cssload-cube3"></div>
-            <div class="cssload-cube cssload-cube4"></div>
-            <div class="cssload-cube cssload-cube5"></div>
-            <div class="cssload-cube cssload-cube6"> </div>
-            <div class="cssload-cube cssload-cube7"></div>
-            <div class="cssload-cube cssload-cube8"></div>
-            <div class="cssload-cube cssload-cube9"></div>
-            <div class="cssload-cube cssload-cube10"></div>
-            <div class="cssload-cube cssload-cube11"></div>
-            <div class="cssload-cube cssload-cube12"></div>
-            <div class="cssload-cube cssload-cube13"></div>
-            <div class="cssload-cube cssload-cube14"></div>
-            <div class="cssload-cube cssload-cube15"></div>
-          </div>
-        </div>
-      </div>
-    -->
 
     <!-- Page-->
     <div class="page">
@@ -55,26 +147,47 @@
                 <div class="rd-navbar-panel">
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a class="brand" href="index.html">
-                      <div class="brand__name"><img class="brand__logo-dark" src="images/logo-default-237x35.png" alt="" width="237" height="35"/><img class="brand__logo-light" src="images/logo-inverse-237x35.png" alt="" width="237" height="35"/>
-                      </div><span class="brand__slogan">Noticias Del centro</span></a></div>
+                  <div class="rd-navbar-brand">
+                    <a class="brand" href="index.html">
+                      <div class="brand__name">
+                        <img class="brand__logo-dark" src="images/logo-default-237x35.png" alt="Logo del Liceo Adan S. - Noticias del centro" width="237" height="35"/>
+                        <img class="brand__logo-light" src="images/logo-inverse-237x35.png" alt="Logo del Liceo Adan S. - Noticias del centro" width="237" height="35"/>
+                      </div>
+                      <span class="brand__slogan">Noticias del centro</span>
+                    </a>
+                  </div>
                 </div>
                 <!-- RD Navbar Nav-->
                 <div class="rd-navbar-nav-wrap">
                   <div class="rd-navbar-element">
                     <ul class="list-icons list-inline-sm">
-                      <li><a class="icon icon-sm fa fa-instagram icon-style-camera" href="#"><span></span><span></span><span></span><span></span></a></li>
-                      <li><a class="icon icon-sm fa fa-facebook icon-style-camera" href="https://www.facebook.com/profile.php?id=100082325281039"><span></span><span></span><span></span><span></span></a></li>
+                      <li>
+                        <a class="icon icon-sm fab fa-instagram icon-style-camera social-icon" href="#" aria-label="Instagram del Liceo">
+                          <span></span><span></span><span></span><span></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="icon icon-sm fab fa-facebook-f icon-style-camera social-icon" href="https://www.facebook.com/profile.php?id=100082325281039" aria-label="Facebook del Liceo">
+                          <span></span><span></span><span></span><span></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="icon icon-sm fab fa-youtube icon-style-camera social-icon" href="#" aria-label="YouTube del Liceo">
+                          <span></span><span></span><span></span><span></span>
+                        </a>
+                      </li>
                     </ul>
                   </div>
                   <!-- RD Navbar Nav-->
                   <ul class="rd-navbar-nav">
-                    <li><a href="/index.html">Home<span></span><span></span><span></span><span></span></a>
+                    <li>
+                      <a class="nav-link" href="/index.html">Inicio<span></span><span></span><span></span><span></span></a>
                     </li>
-                    <li><a href="/about-me.html">Reportajes<span></span><span></span><span></span><span></span></a>
+                    <li>
+                      <a class="nav-link" href="/about-me.html">Reportajes<span></span><span></span><span></span><span></span></a>
                     </li>
-                    </li>
-                    <li><a href="/contact-us.html">Contacto<span></span><span></span><span></span><span></span></a>
+                    <li>
+                      <a class="nav-link" href="/contact-us.html">Contacto<span></span><span></span><span></span><span></span></a>
                     </li>
                   </ul>
                 </div>
@@ -84,101 +197,186 @@
         </div>
       </header>
 
-      <!-- Breadcrumbs-->
-      <section class="breadcrumbs-custom bg-image" style="background: url('/images/pfrancofonia.jfif');">
+      <!-- Hero Section -->
+      <section class="breadcrumbs-custom bg-image" style="background: url('/images/pfrancofonia.jfif'); background-size: cover; background-position: center;">
         <div class="shell">
-          <h1 class="breadcrumbs-custom__title">La Francophonie</h1>
-          <ul class="breadcrumbs-custom__path">
-            <li><a href="/index.html">Home</a></li>
-            <li class="active">Noticias</li>
-          </ul>
+          <div class="breadcrumbs-custom__inner">
+            <h1 class="breadcrumbs-custom__title hero-title" style="position: relative; z-index: 1;">La Francophonie</h1>
+            <ul class="breadcrumbs-custom__path" style="position: relative; z-index: 1;">
+              <li><a href="/index.html">Inicio</a></li>
+              <li class="active">Noticias</li>
+            </ul>
+          </div>
         </div>
       </section>
-      <!-- Base typography-->
+
+      <!-- Main Content -->
       <section class="section section-md bg-white">
         <div class="shell">
           <div class="range range-50">
             <div class="cell-md-10 cell-lg-8">
-              <ul class="list-xl">
-                <li>
-                  <h1>La Francophonie : Un Monde de Diversité Culturelle et Linguistique.</h1>
-                  <p><img class="img-right" src="/images/pag1.jfif" alt="" width="770" height="485"/>Chaque 20 mars, des millions de personnes dans le monde entier célèbrent la Journée Internationale de la Francophonie, une date dédiée à la promotion de la langue française et des cultures qui partagent cette langue. La Francophonie n’est pas seulement un concept linguistique, mais aussi un réseau mondial qui unit les pays et les communautés à travers une riche diversité culturelle. <br><br>Le 20 mars, on célèbre la Journée Internationale de la Francophonie, une date qui reconnaît la valeur du français et l'importance de la Francophonie à l'échelle mondiale. À cette occasion, des événements culturels, éducatifs et artistiques sont organisés pour promouvoir la langue et la culture francophones dans diverses régions du monde. <br><br>Cette journée est aussi une occasion de réfléchir aux défis auxquels fait face la langue française dans un monde globalisé, où l'anglais exerce une forte influence. Malgré cela, le français reste une langue vivante, moderne et vibrante, qui s'adapte aux nouvelles technologies et aux réalités du XXIe siècle.</p>
-                  </li>
+              <div class="card">
+                <div class="card-body">
+                  <h1 class="text-center mb-4">La Francophonie: Un Monde de Diversité Culturelle et Linguistique</h1>
+                  <div class="row align-items-center">
+                    <div class="col-md-6">
+                      <img class="img-fluid img-rounded mb-3 mb-md-0" src="/images/pag1.jfif" alt="Celebración de la Francophonie en diferentes países" width="770" height="485"/>
+                    </div>
+                    <div class="col-md-6">
+                      <p>Chaque 20 mars, des millions de personnes dans le monde entier célèbrent la Journée Internationale de la Francophonie, une date dédiée à la promotion de la langue française et des cultures qui partagent cette langue.</p>
+                    </div>
+                  </div>
+                  <p class="mt-3">La Francophonie n'est pas seulement un concept linguistique, mais aussi un réseau mondial qui unit les pays et les communautés à travers une riche diversité culturelle.</p>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card-body">
+                  <h2 class="text-center mb-4">Qu'est-ce que la Francophonie ?</h2>
+                  <figure class="figure-light text-center">
+                    <img class="img-fluid img-rounded" src="/images/franco1.jfif" alt="Mapa de países miembros de la Francophonie" width="770" height="485"/>
+                    <figcaption class="mt-2">
+                      <p class="text-muted">Lic. Adan S. - Especialista en Culturas Francófonas</p>
+                    </figcaption>
+                  </figure>
+                  <div class="highlight-box mt-4">
+                    <p>La Francophonie se réfère à l'ensemble des pays et régions où le français est parlé. Cependant, la Francophonie va au-delà de l'utilisation d'une simple langue. C'est une communauté qui prône le respect de la diversité culturelle, le développement social et économique, ainsi que la coopération internationale.</p>
+                  </div>
+                  <p class="mt-3">L'Organisation Internationale de la Francophonie (OIF) regroupe 88 États et gouvernements, dont la France, le Canada, la Suisse, la Belgique, ainsi que de nombreux pays d'Afrique, d'Asie et des Caraïbes, qui partagent le français comme l'un des piliers de leur identité culturelle.</p>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card-body">
+                  <h2 class="text-center mb-4">El Francés en el Mundo</h2>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <img class="img-fluid img-rounded" src="/images/franco2.jfif" alt="Estudiantes aprendiendo francés en África" width="770" height="485"/>
+                    </div>
+                    <div class="col-md-6">
+                      <p>Bien que le français soit reconnu comme langue officielle dans de nombreux pays, il est également parlé ailleurs dans le monde comme langue seconde. Actuellement, on estime qu'il y a plus de 300 millions de francophones dans le monde.</p>
+                    </div>
+                  </div>
+                  <p class="mt-3">Dans un contexte mondialisé, le français reste une langue clé de travail dans les institutions internationales, la diplomatie et les médias.</p>
+                  
+                  <h3 class="mt-4">El Francés en África</h3>
+                  <p>En Afrique, par exemple, le français est parlé dans plus de 30 pays, devenant un outil essentiel pour l'éducation, la politique et la culture. De plus, il est important de noter que, dans de nombreux pays, le français est en expansion, car beaucoup de personnes apprennent cette langue comme langue seconde en raison de ses avantages dans les domaines professionnels et académiques.</p>
+                  
+                  <h3 class="mt-4">Diversidad Cultural</h3>
+                  <p>L'un des aspects les plus intéressants de la Francophonie est sa diversité culturelle. À travers la langue française, une grande variété de traditions, coutumes et formes d'expression artistique sont partagées.</p>
+                  
+                  <ul class="list-group list-group-flush mt-3">
+                    <li class="list-group-item"><i class="fas fa-book mr-2"></i> Literatura: Albert Camus, Léopold Sédar Senghor, Amélie Nothomb</li>
+                    <li class="list-group-item"><i class="fas fa-music mr-2"></i> Música africana en francés</li>
+                    <li class="list-group-item"><i class="fas fa-film mr-2"></i> Cine canadiense y francés</li>
+                    <li class="list-group-item"><i class="fas fa-utensils mr-2"></i> Gastronomía de Marruecos y Bélgica</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card-body">
+                  <h2 class="text-center mb-4">Oportunidades para Estudiantes</h2>
+                  <div class="row">
+                    <div class="col-md-8">
+                      <p>Para los estudiantes, aprender el francés abre las puertas hacia un mundo lleno de oportunidades académicas y profesionales. Muchos programas de intercambio, becas y oportunidades de empleo en países francófonos están disponibles para quienes dominan el idioma.</p>
+                      <p>Además, el conocimiento del francés permite el acceso a una vasta cantidad de recursos culturales, educativos y científicos.</p>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="bg-light p-3 rounded text-center">
+                        <i class="fas fa-graduation-cap fa-3x mb-3 text-primary"></i>
+                        <p>En aprender le français, les étudiants ne se contentent pas d'élargir leurs horizons linguistiques, mais ils développent également une plus grande compréhension et un respect plus profond des différentes cultures qui composent la Francophonie.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <!-- Image Centered-->
-      <section class="section section-md bg-white">
-        <div class="shell">
-          <div class="range">
-            <div class="cell-md-10 cell-lg-8">
-              <h2>Qu'est-ce que la Francophonie ?</h2>
-              <figure class="figure-light"><img class="img-centered" src="/images/franco1.jfif" alt="" width="770" height="485"/>
-                <figcaption>
-                  <p>Lic. Adan S.</p>
-                </figcaption>
-              </figure>
-              <p>La Francophonie se réfère à l'ensemble des pays et régions où le français est parlé. Cependant, la Francophonie va au-delà de l'utilisation d'une simple langue. C’est une communauté qui prône le respect de la diversité culturelle, le développement social et économique, ainsi que la coopération internationale. L'Organisation Internationale de la Francophonie (OIF) regroupe 88 États et gouvernements, dont la France, le Canada, la Suisse, la Belgique, ainsi que de nombreux pays d'Afrique, d'Asie et des Caraïbes, qui partagent le français comme l'un des piliers de leur identité culturelle.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Image Left-->
-      <section class="section section-md bg-white">
-        <div class="shell">
-          <div class="range">
-            <div class="cell-md-10 cell-lg-8">
-              <h2></h2>
-              <p><img src="/images/franco2.jfif" alt="" width="770" height="485"/>Bien que le français soit reconnu comme langue officielle dans de nombreux pays, il est également parlé ailleurs dans le monde comme langue seconde. Actuellement, on estime qu’il y a plus de 300 millions de francophones dans le monde. Dans un contexte mondialisé, le français reste une langue clé de travail dans les institutions internationales, la diplomatie et les médias. <br><br>En Afrique, par exemple, le français est parlé dans plus de 30 pays, devenant un outil essentiel pour l'éducation, la politique et la culture. De plus, il est important de noter que, dans de nombreux pays, le français est en expansion, car beaucoup de personnes apprennent cette langue comme langue seconde en raison de ses avantages dans les domaines professionnels et académiques.</p></p>
-              <p>L'un des aspects les plus intéressants de la Francophonie est sa diversité culturelle. À travers la langue française, une grande variété de traditions, coutumes et formes d’expression artistique sont partagées. Dans le domaine littéraire, par exemple, la littérature francophone a produit des auteurs de renommée internationale tels qu'Albert Camus, Léopold Sédar Senghor et Amélie Nothomb, qui ont enrichi la culture mondiale avec leurs œuvres. <br><br>La musique, le cinéma, la mode et la gastronomie sont également des domaines où la Francophonie est présente de manière remarquable. De la musique africaine en français au cinéma canadien et français, en passant par la cuisine de pays comme le Maroc ou la Belgique, la Francophonie est une célébration constante de la créativité et de l'échange culturel. <br><br>Pour les étudiants, apprendre le français ouvre des portes vers un monde plein d’opportunités académiques et professionnelles. De nombreux programmes d’échange, bourses et opportunités d’emploi dans des pays francophones sont disponibles pour ceux qui maîtrisent la langue. De plus, la connaissance du français permet l’accès à une vaste quantité de ressources culturelles, éducatives et scientifiques. <br><br>En apprenant le français, les étudiants ne se contentent pas d’élargir leurs horizons linguistiques, mais ils développent également une plus grande compréhension et un respect plus profond des différentes cultures qui composent la Francophonie.</p>
-
-            </div>
-          </div>
-        </div>
-        
-      </section>
-      <!-- Image Right-->
 
       <!-- Page Footer-->
-      <footer class="footer-centered section bg-gray-darker">
+      <footer class="section footer bg-gray-darker text-white">
         <div class="shell">
           <div class="range range-sm-center">
             <div class="cell-sm-10 cell-md-8 cell-lg-6">
-              <!-- Brand--><a class="brand" href="index.html">
-                <div class="brand__name"><img src="/images/conocenos2.jpeg" alt="" width="237" height="35"/>
-                </div><span class="brand__slogan">Liceo Adan S.</span></a>
-                    <!-- RD Mailform-->
-                    <form class="rd-mailform form_inline" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
-                      <div class="form__inner">
-                        <div class="form-wrap">
-                          <input class="form-input" id="subscribe-form-footer-email" type="email" name="email" data-constraints="@Email @Required">
-                          <label class="form-label" for="subscribe-form-footer-email">Tu E-mail...</label>
-                        </div>
-                        <div class="form-button">
-                          <button class="button button-link" type="submit">Subscribete</button>
-                        </div>
-                      </div>
-                    </form>
-              <ul class="list-icons list-inline-sm">
-                <li><a class="icon icon-sm fa fa-instagram icon-style-camera" href="#"><span></span><span></span><span></span><span></span></a></li>
-                <li><a class="icon icon-sm fa fa-facebook icon-style-camera" href="#"><span></span><span></span><span></span><span></span></a></li>
-              </ul>
-              <!-- Rights-->
-              <p class="rights"><span>liceo Adan Santana Sierra</span><span>&nbsp;&copy;&nbsp; </span><span class="copyright-year"></span>.&nbsp; <br class="veil-xs"><a class="link-underline" href="#">Privacy Policy</a><span> Design&nbsp;by&nbsp;<a href="https://www.templatemonster.com">Jose Miguel Encarnacion</a></span></p>
+              <!-- Brand-->
+              <div class="text-center mb-4">
+                <a class="brand" href="index.html">
+                  <div class="brand__name">
+                    <img src="/images/conocenos2.jpeg" alt="Logo del Liceo Adan S." width="237" height="35"/>
+                  </div>
+                  <span class="brand__slogan">Liceo Adan S.</span>
+                </a>
+              </div>
+              
+              <!-- Subscription Form -->
+              <div class="mb-4">
+                <h5 class="text-center mb-3">Suscríbete a nuestras noticias</h5>
+                <form class="rd-mailform" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
+                  <div class="form-row">
+                    <div class="col">
+                      <input class="form-control form-control-lg" id="subscribe-form-footer-email" type="email" name="email" placeholder="Tu correo electrónico..." required>
+                    </div>
+                    <div class="col-auto">
+                      <button class="btn btn-subscribe btn-lg" type="submit">Suscribirse</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              
+              <!-- Social Links -->
+              <div class="text-center mb-4">
+                <ul class="list-inline">
+                  <li class="list-inline-item mx-2">
+                    <a class="social-icon text-white" href="#" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+                  </li>
+                  <li class="list-inline-item mx-2">
+                    <a class="social-icon text-white" href="https://www.facebook.com/profile.php?id=100082325281039" aria-label="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+                  </li>
+                  <li class="list-inline-item mx-2">
+                    <a class="social-icon text-white" href="#" aria-label="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
+                  </li>
+                  <li class="list-inline-item mx-2">
+                    <a class="social-icon text-white" href="#" aria-label="Twitter"><i class="fab fa-twitter fa-lg"></i></a>
+                  </li>
+                </ul>
+              </div>
+              
+              <!-- Legal Info -->
+              <div class="text-center small">
+                <p class="mb-1">© <span class="copyright-year"></span> Liceo Adan Santana Sierra. Todos los derechos reservados.</p>
+                <p class="mb-1">
+                  <a class="text-white-50" href="#">Política de Privacidad</a> | 
+                  <a class="text-white-50" href="#">Términos de Servicio</a>
+                </p>
+                <p class="text-muted">Diseñado por <a href="#" class="text-white-50">José Miguel Encarnación</a></p>
+              </div>
             </div>
           </div>
         </div>
       </footer>
     </div>
+    
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      // Actualizar año de copyright
+      document.querySelector('.copyright-year').textContent = new Date().getFullYear();
+      
+      // Smooth scrolling para enlaces internos
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    </script>
   </body>
 </html>
-
-
-

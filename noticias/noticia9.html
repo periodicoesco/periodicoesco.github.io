@@ -1,21 +1,161 @@
 <!DOCTYPE html>
-<html class="wide wow-animation" lang="en">
+<html class="wide wow-animation" lang="es">
   <head>
     <!-- Site Title-->
-    <title>Noticias</title>
+    <title>Noticias - Semana de la Geografía</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
+    <meta name="description" content="Noticias sobre el Proyecto de Reciclaje y actividades ambientales en el Liceo Adán Santana">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <!-- Stylesheets-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic%7CJosefin+Sans:400,700,300italic">
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/style.css">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <style>
+      .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} 
+      html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
+      
+      /* Mejoras visuales */
+      .navbar-brand img { transition: opacity 0.3s ease; }
+      .navbar-brand:hover img { opacity: 0.8; }
+      
+      .social-icon {
+        transition: transform 0.3s ease, color 0.3s ease;
+      }
+      .social-icon:hover {
+        transform: translateY(-3px);
+      }
+      
+      .nav-link {
+        position: relative;
+        padding-bottom: 5px;
+      }
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #2ecc71;
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      
+      .breadcrumbs-custom {
+        position: relative;
+      }
+      .breadcrumbs-custom::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.6);
+      }
+      
+      .breadcrumbs-custom__path li:not(:last-child)::after {
+        content: '›';
+        margin: 0 10px;
+        color: #fff;
+      }
+      
+      .breadcrumbs-custom__path a {
+        transition: color 0.3s ease;
+      }
+      .breadcrumbs-custom__path a:hover {
+        color: #2ecc71;
+      }
+      
+      .card {
+        border: none;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 30px;
+      }
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      }
+      
+      .img-rounded {
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+      }
+      .img-rounded:hover {
+        transform: scale(1.02);
+      }
+      
+      .highlight-box {
+        background: #f8f9fa;
+        border-left: 4px solid #2ecc71;
+        padding: 20px;
+        margin: 30px 0;
+        border-radius: 0 8px 8px 0;
+      }
+      
+      .footer {
+        background: #34495e;
+        color: #fff;
+      }
+      
+      .form-control {
+        border-radius: 4px;
+        padding: 12px 15px;
+      }
+      
+      .btn-subscribe {
+        background: #2ecc71;
+        color: white;
+        border-radius: 4px;
+        padding: 12px 25px;
+        transition: all 0.3s ease;
+        border: none;
+      }
+      .btn-subscribe:hover {
+        background: #27ae60;
+        transform: translateY(-2px);
+      }
+      
+      .quote-box {
+        background: #e8f8f5;
+        border-radius: 8px;
+        padding: 20px;
+        margin: 20px 0;
+        position: relative;
+      }
+      .quote-box::before {
+        content: '"';
+        font-size: 60px;
+        color: #2ecc71;
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        opacity: 0.3;
+      }
+      
+      @media (max-width: 767px) {
+        .hero-title {
+          font-size: 2rem;
+        }
+        .card {
+          margin-bottom: 20px;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+
     <!-- Page-->
     <div class="page">
       <!-- Page header-->
@@ -29,27 +169,50 @@
                 <div class="rd-navbar-panel">
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a class="brand" href="index.html">
-                      <div class="brand__name"><img class="brand__logo-dark" src="/images/favicon.ico" alt="" width="237" height="35"/><img class="brand__logo-light" src="images/logo-inverse-237x35.png" alt="" width="237" height="35"/>
-                      </div><span class="brand__slogan">Noticias Del centro</span></a></div>
+                  <div class="rd-navbar-brand">
+                    <a class="brand" href="index.html">
+                      <div class="brand__name">
+                        <img class="brand__logo-dark" src="/images/favicon.ico" alt="Logo del Liceo Adan S. - Educación de calidad" width="237" height="35"/>
+                        <img class="brand__logo-light" src="images/logo-inverse-237x35.png" alt="Logo del Liceo Adan S. - Educación de calidad" width="237" height="35"/>
+                      </div>
+                      <span class="brand__slogan">Noticias del centro</span>
+                    </a>
+                  </div>
                 </div>
                 <!-- RD Navbar Nav-->
                 <div class="rd-navbar-nav-wrap">
                   <div class="rd-navbar-element">
                     <ul class="list-icons list-inline-sm">
-                      <li><a class="icon icon-sm fa fa-instagram icon-style-camera" href="#"><span></span><span></span><span></span><span></span></a></li>
-                      <li><a class="icon icon-sm fa fa-facebook icon-style-camera" href="https://www.facebook.com/profile.php?id=100082325281039"><span></span><span></span><span></span><span></span></a></li>
+                      <li>
+                        <a class="icon icon-sm fab fa-instagram icon-style-camera social-icon" href="#" aria-label="Instagram del Liceo">
+                          <span></span><span></span><span></span><span></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="icon icon-sm fab fa-facebook-f icon-style-camera social-icon" href="https://www.facebook.com/profile.php?id=100082325281039" aria-label="Facebook del Liceo">
+                          <span></span><span></span><span></span><span></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="icon icon-sm fab fa-youtube icon-style-camera social-icon" href="#" aria-label="YouTube del Liceo">
+                          <span></span><span></span><span></span><span></span>
+                        </a>
+                      </li>
                     </ul>
                   </div>
                   <!-- RD Navbar Nav-->
                   <ul class="rd-navbar-nav">
-                    <li><a href="index.html">Home<span></span><span></span><span></span><span></span></a>
+                    <li>
+                      <a class="nav-link" href="index.html">Inicio<span></span><span></span><span></span><span></span></a>
                     </li>
-                    <li><a href="about-me.html">Reportajes<span></span><span></span><span></span><span></span></a>
+                    <li>
+                      <a class="nav-link" href="about-me.html">Reportajes<span></span><span></span><span></span><span></span></a>
                     </li>
-                    <li class="active"><a href="typography.html">Noticias<span></span><span></span><span></span><span></span></a>
+                    <li class="active">
+                      <a class="nav-link" href="typography.html">Noticias<span></span><span></span><span></span><span></span></a>
                     </li>
-                    <li><a href="contact-us.html">Contacto<span></span><span></span><span></span><span></span></a>
+                    <li>
+                      <a class="nav-link" href="contact-us.html">Contacto<span></span><span></span><span></span><span></span></a>
                     </li>
                   </ul>
                 </div>
@@ -59,104 +222,188 @@
         </div>
       </header>
 
-      <!-- Breadcrumbs-->
-      <section class="breadcrumbs-custom bg-image" style="background-image: url('/images/pg.jfif');">
+      <!-- Hero Section -->
+      <section class="breadcrumbs-custom bg-image" style="background-image: url('/images/pg.jfif'); background-size: cover; background-position: center;">
         <div class="shell">
-          <h1 class="breadcrumbs-custom__title">Semana de la Geografia</h1>
-          <ul class="breadcrumbs-custom__path">
-            <li><a href="/index.html">Home</a></li>
-            <li class="active">Noticias</li>
-          </ul>
+          <div class="breadcrumbs-custom__inner">
+            <h1 class="breadcrumbs-custom__title hero-title" style="position: relative; z-index: 1;">Semana de la Geografía</h1>
+            <ul class="breadcrumbs-custom__path" style="position: relative; z-index: 1;">
+              <li><a href="/index.html">Inicio</a></li>
+              <li class="active">Noticias</li>
+            </ul>
+          </div>
         </div>
       </section>
-      <!-- Base typography-->
+
+      <!-- Main Content -->
       <section class="section section-md bg-white">
         <div class="shell">
           <div class="range range-50">
             <div class="cell-md-10 cell-lg-8">
-              <ul class="list-xl">
-                <li>
-                  <p><img src="/images/pg.jfif" alt="" width="770" height="485"/>El pasado 21 de marzo, los estudiantes del Liceo Profesor Adán Santana llevaron a cabo una actividad educativa y recreativa en el marco del "Proyecto de Reciclaje de las Artes Aplicadas". Este evento, que contó con meses de preparación, tuvo como objetivo concienciar a la comunidad sobre la importancia del reciclaje y la protección del medio ambiente.</p>
-                    <p></p>
-                </li>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Image Centered-->
-      <section class="section section-md bg-white">
-        <div class="shell">
-          <div class="range">
-            <div class="cell-md-10 cell-lg-8">
-              <h2></h2>
-              <figure class="figure-light"><img class="img-centered" src="/images/dg.jfif" alt="" width="770" height="485"/>
-                <figcaption>
-                  <p></p>
-                </figcaption>
-              </figure>
-              <p>Uno de los momentos más destacados de la jornada fue la dramatización sobre un problema ambiental que afecta directamente a la comunidad de Najayo Arriba. Los estudiantes representaron la problemática actual con la empresa minera DOCALSA, la cual pretende explotar tierras en la zona, lo que ha generado preocupación entre los habitantes. A través de esta dramatización, los jóvenes expresaron su rechazo a la explotación de los recursos naturales sin un adecuado estudio de impacto ambiental y sin el consentimiento de la comunidad.</p>
+              <div class="card">
+                <div class="card-body">
+                  <h2 class="text-center mb-4">Proyecto de Reciclaje de las Artes Aplicadas</h2>
+                  <div class="row align-items-center">
+                    <div class="col-md-6">
+                      <img class="img-fluid img-rounded" src="/images/pg.jfif" alt="Estudiantes participando en actividades de reciclaje" width="770" height="485"/>
+                    </div>
+                    <div class="col-md-6">
+                      <p>El pasado 21 de marzo, los estudiantes del Liceo Profesor Adán Santana llevaron a cabo una actividad educativa y recreativa en el marco del "Proyecto de Reciclaje de las Artes Aplicadas". Este evento, que contó con meses de preparación, tuvo como objetivo concienciar a la comunidad sobre la importancia del reciclaje y la protección del medio ambiente.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="text-center mb-4">Dramatización sobre problemática ambiental</h3>
+                  <figure class="figure-light text-center">
+                    <img class="img-fluid img-rounded" src="/images/dg.jfif" alt="Estudiantes realizando dramatización sobre problemática ambiental" width="770" height="485"/>
+                    <figcaption class="mt-2">
+                      <p class="text-muted">Estudiantes representando la problemática de DOCALSA</p>
+                    </figcaption>
+                  </figure>
+                  <div class="highlight-box mt-4">
+                    <p>Uno de los momentos más destacados de la jornada fue la dramatización sobre un problema ambiental que afecta directamente a la comunidad de Najayo Arriba. Los estudiantes representaron la problemática actual con la empresa minera DOCALSA, la cual pretende explotar tierras en la zona.</p>
+                  </div>
+                  <p class="mt-3">A través de esta dramatización, los jóvenes expresaron su rechazo a la explotación de los recursos naturales sin un adecuado estudio de impacto ambiental y sin el consentimiento de la comunidad.</p>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="text-center mb-4">Desfile de modas con materiales reciclados</h3>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <img class="img-fluid img-rounded" src="/images/desfile.jfif" alt="Desfile de modas con materiales reciclados" width="770" height="485"/>
+                    </div>
+                    <div class="col-md-6">
+                      <p>Como segundo acto, se realizó un desfile de modas con vestidos y accesorios elaborados con materiales reciclables, principalmente papel y fundas plásticas. Este desfile resaltó la creatividad y el talento de los estudiantes, quienes demostraron cómo es posible reutilizar materiales para crear arte y moda sostenible.</p>
+                    </div>
+                  </div>
+                  
+                  <div class="quote-box mt-4">
+                    <p>"Este proyecto no solo muestra el talento de nuestros estudiantes, sino también su compromiso con el medio ambiente. Estamos formando ciudadanos conscientes de su entorno y capaces de proponer soluciones creativas a problemas reales."</p>
+                    <p class="text-right font-weight-bold">— Lic. Adán Santana, Director</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="card">
+                <div class="card-body">
+                  <h3 class="text-center mb-4">Compromiso con la educación ambiental</h3>
+                  <p>La actividad fue recibida con entusiasmo por parte de los maestros, quienes elogiaron el esfuerzo de los estudiantes y la importancia de generar conciencia sobre el cuidado del medio ambiente.</p>
+                  
+                  <div class="row mt-4">
+                    <div class="col-md-4">
+                      <div class="text-center">
+                        <i class="fas fa-recycle fa-3x mb-3 text-success"></i>
+                        <h5>Reciclaje Creativo</h5>
+                        <p>Transformación de materiales desechados en obras de arte</p>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="text-center">
+                        <i class="fas fa-theater-masks fa-3x mb-3 text-primary"></i>
+                        <h5>Conciencia Social</h5>
+                        <p>Dramatizaciones sobre problemáticas ambientales locales</p>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="text-center">
+                        <i class="fas fa-hands-helping fa-3x mb-3 text-warning"></i>
+                        <h5>Participación Comunitaria</h5>
+                        <p>Involucramiento de toda la comunidad educativa</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <p class="mt-4">Con iniciativas como esta, el Liceo Profesor Adán Santana reafirma su compromiso con la educación ambiental y el desarrollo sostenible en la comunidad.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Image Left-->
-      <section class="section section-md bg-white">
-        <div class="shell">
-          <div class="range">
-            <div class="cell-md-10 cell-lg-8">
-              <h2></h2>
-              <p><img src="/images/desfile.jfif" alt="" width="770" height="485"/>Como segundo acto, se realizó un desfile de modas con vestidos y accesorios elaborados con materiales reciclables, principalmente papel y fundas plásticas. Este desfile resaltó la creatividad y el talento de los estudiantes, quienes demostraron cómo es posible reutilizar materiales para crear arte y moda sostenible.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Image Right-->
-      <section class="section section-md bg-white">
-        <div class="shell">
-          <div class="range">
-            <div class="cell-md-10 cell-lg-8">
-              <h2></h2>
-              <p>La actividad fue recibida con entusiasmo por parte de los maestros, quienes elogiaron el esfuerzo de los estudiantes y la importancia de generar conciencia sobre el cuidado del medio ambiente. Con iniciativas como esta, el Liceo Profesor Adán Santana reafirma su compromiso con la educación ambiental y el desarrollo sostenible en la comunidad.</p>
-            </div>
-          </div>
-        </div>
-      </section>
       <!-- Page Footer-->
-      <footer class="footer-centered section bg-gray-darker">
+      <footer class="section footer bg-gray-darker text-white">
         <div class="shell">
           <div class="range range-sm-center">
             <div class="cell-sm-10 cell-md-8 cell-lg-6">
-              <!-- Brand--><a class="brand" href="index.html">
-                </div><span class="brand__slogan"></span></a>
-                    <!-- RD Mailform-->
-                    <form class="rd-mailform form_inline" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
-                      <div class="form__inner">
-                        <div class="form-wrap">
-                          <input class="form-input" id="subscribe-form-footer-email" type="email" name="email" data-constraints="@Email @Required">
-                          <label class="form-label" for="subscribe-form-footer-email">Tu E-mail...</label>
-                        </div>
-                        <div class="form-button">
-                          <button class="button button-link" type="submit">Subscribete</button>
-                        </div>
-                      </div>
-                    </form>
-              <ul class="list-icons list-inline-sm">
-                <li><a class="icon icon-sm fa fa-instagram icon-style-camera" href="#"><span></span><span></span><span></span><span></span></a></li>
-                <li><a class="icon icon-sm fa fa-facebook icon-style-camera" href="#"><span></span><span></span><span></span><span></span></a></li>
-              </ul>
-              <!-- Rights-->
-              <p class="rights"><span>liceo Adan Santana Sierra</span><span>&nbsp;&copy;&nbsp; </span><span class="copyright-year"></span>.&nbsp; <br class="veil-xs"><a class="link-underline" href="#">Privacy Policy</a><span> Design&nbsp;by&nbsp;<a href="https://www.templatemonster.com">Jose Miguel Encarnacion</a></span></p>
+              <!-- Brand-->
+              <div class="text-center mb-4">
+                <a class="brand" href="index.html">
+                  <div class="brand__name">
+                    <img src="/images/favicon.ico" alt="Logo del Liceo Adan S." width="237" height="35"/>
+                  </div>
+                  <span class="brand__slogan">Liceo Adan S.</span>
+                </a>
+              </div>
+              
+              <!-- Subscription Form -->
+              <div class="mb-4">
+                <h5 class="text-center mb-3">Suscríbete a nuestras noticias</h5>
+                <form class="rd-mailform" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
+                  <div class="form-row">
+                    <div class="col">
+                      <input class="form-control form-control-lg" id="subscribe-form-footer-email" type="email" name="email" placeholder="Tu correo electrónico..." required>
+                    </div>
+                    <div class="col-auto">
+                      <button class="btn btn-subscribe btn-lg" type="submit">Suscribirse</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              
+              <!-- Social Links -->
+              <div class="text-center mb-4">
+                <ul class="list-inline">
+                  <li class="list-inline-item mx-2">
+                    <a class="social-icon text-white" href="#" aria-label="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+                  </li>
+                  <li class="list-inline-item mx-2">
+                    <a class="social-icon text-white" href="https://www.facebook.com/profile.php?id=100082325281039" aria-label="Facebook"><i class="fab fa-facebook-f fa-lg"></i></a>
+                  </li>
+                  <li class="list-inline-item mx-2">
+                    <a class="social-icon text-white" href="#" aria-label="YouTube"><i class="fab fa-youtube fa-lg"></i></a>
+                  </li>
+                </ul>
+              </div>
+              
+              <!-- Legal Info -->
+              <div class="text-center small">
+                <p class="mb-1">© <span class="copyright-year"></span> Liceo Adan Santana Sierra. Todos los derechos reservados.</p>
+                <p class="mb-1">
+                  <a class="text-white-50" href="#">Política de Privacidad</a> | 
+                  <a class="text-white-50" href="#">Términos de Servicio</a>
+                </p>
+                <p class="text-muted">Diseñado por <a href="#" class="text-white-50">José Miguel Encarnación</a></p>
+              </div>
             </div>
           </div>
         </div>
       </footer>
     </div>
+    
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+      // Actualizar año de copyright
+      document.querySelector('.copyright-year').textContent = new Date().getFullYear();
+      
+      // Smooth scrolling para enlaces internos
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    </script>
   </body>
 </html>

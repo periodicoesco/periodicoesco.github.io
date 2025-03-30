@@ -1,46 +1,307 @@
 <!DOCTYPE html>
-<html class="wide wow-animation" lang="en">
+<html class="wide wow-animation" lang="es">
   <head>
-    <!-- Site Title-->
-    <title>Noticias</title>
+    <title>Concientización sobre embarazo adolescente | Liceo Adán Santana</title>
+    <meta name="description" content="Estudiantes de primer año del Liceo Adán Santana Sierra concientizan sobre el embarazo en la adolescencia">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <link rel="icon" href="/images/favicon.ico" type="/images/favicon.icon">
+    <meta name="author" content="Liceo Adán Santana Sierra">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic%7CJosefin+Sans:400,700,300italic">
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/style.css">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <style>
+      .ie-panel {
+        display: none;
+        background: #212121;
+        padding: 10px 0;
+        box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);
+        clear: both;
+        text-align:center;
+        position: relative;
+        z-index: 1;
+      }
+      
+      html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
+        display: block;
+      }
+      
+      /* Header Styles */
+      .page-header {
+        background: #fff;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        position: relative;
+        z-index: 1000;
+      }
+      
+      .rd-navbar-brand .brand__logo {
+        height: 35px;
+        width: auto;
+        max-width: 237px;
+      }
+      
+      .brand__slogan {
+        font-size: 0.8rem;
+        color: #666;
+        display: block;
+        margin-top: 5px;
+      }
+      
+      .rd-navbar-nav li a {
+        font-weight: 500;
+        color: #333;
+        transition: color 0.3s ease;
+      }
+      
+      .rd-navbar-nav li a:hover {
+        color: #e74c3c;
+      }
+      
+      .icon-style-camera {
+        color: #333;
+        transition: color 0.3s ease;
+      }
+      
+      .icon-style-camera:hover {
+        color: #e74c3c;
+      }
+      
+      /* Hero Section */
+      .breadcrumbs-custom {
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/images/embarazo.jpeg');
+        background-size: cover;
+        background-position: center;
+        padding: 100px 0;
+        color: white;
+        text-align: center;
+      }
+      
+      .breadcrumbs-custom__title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+      
+      .breadcrumbs-custom__path {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        font-size: 1.1rem;
+      }
+      
+      .breadcrumbs-custom__path li {
+        margin: 0 10px;
+        position: relative;
+      }
+      
+      .breadcrumbs-custom__path li:not(:last-child):after {
+        content: ">";
+        margin-left: 15px;
+      }
+      
+      .breadcrumbs-custom__path li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      
+      .breadcrumbs-custom__path li a:hover {
+        color: #e74c3c;
+      }
+      
+      .breadcrumbs-custom__path li.active {
+        color: #e74c3c;
+      }
+      
+      /* Article Styles */
+      .article-section {
+        padding: 60px 0;
+      }
+      
+      .article-title {
+        font-size: 2.2rem;
+        color: #2c3e50;
+        margin-bottom: 30px;
+        font-weight: 700;
+        line-height: 1.3;
+      }
+      
+      .article-content {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #333;
+      }
+      
+      .article-content p {
+        margin-bottom: 25px;
+      }
+      
+      .article-img {
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        margin: 30px 0;
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+      }
+      
+      .article-img:hover {
+        transform: scale(1.02);
+      }
+      
+      .img-centered {
+        display: block;
+        margin: 0 auto;
+      }
+      
+      .figure-light figcaption {
+        text-align: center;
+        color: #666;
+        font-style: italic;
+        margin-top: 10px;
+        font-size: 0.9rem;
+      }
+      
+      .section-title {
+        font-size: 1.8rem;
+        color: #e74c3c;
+        margin: 40px 0 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #eee;
+      }
+      
+      .highlight-box {
+        background: #f8f9fa;
+        border-left: 4px solid #e74c3c;
+        padding: 20px;
+        margin: 30px 0;
+        border-radius: 0 4px 4px 0;
+      }
+      
+      /* Video Thumbnail Styles */
+      .video-section {
+        margin: 60px 0;
+      }
+      
+      .thumb-video {
+        position: relative;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      
+      .thumb-video img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      
+      .thumb-video__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s;
+      }
+      
+      .thumb-video__overlay:hover {
+        background: rgba(231, 76, 60, 0.7);
+      }
+      
+      .thumb-video__overlay .icon {
+        color: white;
+        font-size: 3rem;
+      }
+      
+      .thumb-video__title {
+        font-size: 1.2rem;
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+      
+      /* Footer Styles */
+      .footer-centered {
+        background: #2c3e50;
+        color: #fff;
+        padding: 60px 0 30px;
+      }
+      
+      .footer-brand img {
+        max-width: 200px;
+        margin-bottom: 15px;
+      }
+      
+      .brand__slogan {
+        color: #ecf0f1;
+      }
+      
+      .form-input {
+        background: rgba(255,255,255,0.1);
+        border: none;
+        color: #fff;
+      }
+      
+      .form-input::placeholder {
+        color: #bdc3c7;
+      }
+      
+      .button-primary {
+        background: #e74c3c;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        transition: background 0.3s;
+      }
+      
+      .button-primary:hover {
+        background: #c0392b;
+      }
+      
+      .rights {
+        color: #bdc3c7;
+        font-size: 0.9rem;
+        margin-top: 30px;
+      }
+      
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .breadcrumbs-custom__title {
+          font-size: 2rem;
+        }
+        
+        .article-title {
+          font-size: 1.8rem;
+        }
+        
+        .breadcrumbs-custom__path {
+          flex-direction: column;
+          align-items: center;
+        }
+        
+        .breadcrumbs-custom__path li {
+          margin: 5px 0;
+        }
+        
+        .breadcrumbs-custom__path li:not(:last-child):after {
+          display: none;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-    
-    <!-- Page Loader--
-      <div id="page-loader">
-        <div class="page-loader-body">
-          <div class="cssload-spinner">
-            <div class="cssload-cube cssload-cube0"></div>
-            <div class="cssload-cube cssload-cube1"></div>
-            <div class="cssload-cube cssload-cube2"></div>
-            <div class="cssload-cube cssload-cube3"></div>
-            <div class="cssload-cube cssload-cube4"></div>
-            <div class="cssload-cube cssload-cube5"></div>
-            <div class="cssload-cube cssload-cube6"> </div>
-            <div class="cssload-cube cssload-cube7"></div>
-            <div class="cssload-cube cssload-cube8"></div>
-            <div class="cssload-cube cssload-cube9"></div>
-            <div class="cssload-cube cssload-cube10"></div>
-            <div class="cssload-cube cssload-cube11"></div>
-            <div class="cssload-cube cssload-cube12"></div>
-            <div class="cssload-cube cssload-cube13"></div>
-            <div class="cssload-cube cssload-cube14"></div>
-            <div class="cssload-cube cssload-cube15"></div>
-          </div>
-        </div>
-      </div>
-    -->
 
     <!-- Page-->
     <div class="page">
@@ -55,26 +316,49 @@
                 <div class="rd-navbar-panel">
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a class="brand" href="index.html">
-                      <div class="brand__name"><img class="brand__logo-dark" src="images/logo-default-237x35.png" alt="" width="237" height="35"/><img class="brand__logo-light" src="images/logo-inverse-237x35.png" alt="" width="237" height="35"/>
-                      </div><span class="brand__slogan">Noticias Del centro</span></a></div>
+                  <div class="rd-navbar-brand">
+                    <a class="brand" href="/index.html">
+                      <div class="brand__name">
+                        <img class="brand__logo" src="/images/conocenos2.jpeg" alt="Liceo Adán Santana Sierra" width="237" height="35"/>
+                      </div>
+                      <span class="brand__slogan">Excelencia Educativa</span>
+                    </a>
+                  </div>
                 </div>
                 <!-- RD Navbar Nav-->
                 <div class="rd-navbar-nav-wrap">
                   <div class="rd-navbar-element">
                     <ul class="list-icons list-inline-sm">
-                      <li><a class="icon icon-sm fa fa-instagram icon-style-camera" href="#"><span></span><span></span><span></span><span></span></a></li>
-                      <li><a class="icon icon-sm fa fa-facebook icon-style-camera" href="https://www.facebook.com/profile.php?id=100082325281039"><span></span><span></span><span></span><span></span></a></li>
+                      <li>
+                        <a class="icon icon-sm fa fa-instagram icon-style-camera" href="#">
+                          <span></span><span></span><span></span><span></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="icon icon-sm fa fa-facebook icon-style-camera" href="https://www.facebook.com/profile.php?id=100082325281039">
+                          <span></span><span></span><span></span><span></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="icon icon-sm fa fa-youtube icon-style-camera" href="#">
+                          <span></span><span></span><span></span><span></span>
+                        </a>
+                      </li>
                     </ul>
                   </div>
                   <!-- RD Navbar Nav-->
                   <ul class="rd-navbar-nav">
-                    <li><a href="/index.html">Home<span></span><span></span><span></span><span></span></a>
+                    <li>
+                      <a href="/index.html">Inicio<span></span><span></span><span></span><span></span></a>
                     </li>
-                    <li><a href="/about-me.html">Reportajes<span></span><span></span><span></span><span></span></a>
+                    <li>
+                      <a href="/about-me.html">Reportajes<span></span><span></span><span></span><span></span></a>
                     </li>
+                    <li class="active">
+                      <a href="/typography.html">Noticias<span></span><span></span><span></span><span></span></a>
                     </li>
-                    <li><a href="/contact-us.html">Contacto<span></span><span></span><span></span><span></span></a>
+                    <li>
+                      <a href="/contact-us.html">Contacto<span></span><span></span><span></span><span></span></a>
                     </li>
                   </ul>
                 </div>
@@ -84,103 +368,139 @@
         </div>
       </header>
 
-      <!-- Breadcrumbs-->
-      <section class="breadcrumbs-custom bg-image" style="background: url('/images/embarazo.jpeg')no-repeat;">
+      <!-- Hero Section -->
+      <section class="breadcrumbs-custom bg-image">
         <div class="shell">
-          <h1 class="breadcrumbs-custom__title">El embarazo en la adolescencia.</h1>
+          <h1 class="breadcrumbs-custom__title">Embarazo en la Adolescencia</h1>
           <ul class="breadcrumbs-custom__path">
-            <li><a href="/index.html">Home</a></li>
-            <li class="active">Noticias</li>
+            <li><a href="/index.html">Inicio</a></li>
+            <li class="active">Concientización</li>
           </ul>
         </div>
       </section>
-      <!-- Base typography--
-      <section class="section section-md bg-white">
-        <div class="shell">
-          <div class="range range-50">
-            <div class="cell-md-10 cell-lg-8">
-              <ul class="list-xl">
-                <li>
-                  <h1>"Enamórate de la Lectura"</h1>
-                  <p><img class="img-right" src="/images/noticia5.jpeg" alt="" width="770" height="485"/>El pasado 14 de febrero, en el marco del Trimestre Patrio, nuestro liceo celebró con entusiasmo el Día del Amor y la Amistad con una actividad especial bajo el lema "Enamórate de la Lectura". Este evento, que combinó el espíritu patriótico con el amor por el conocimiento, estuvo dedicado a resaltar la importancia de la lectura y la historia dominicana, con un enfoque en las asignaturas de Sociales, Lengua Española y Artística.</p>
-                  </li>
-            </div>
-          </div>
-        </div>
-      </section>
-       Image Centered-->
 
+      <!-- Main Content -->
       <section class="section section-md bg-white">
         <div class="shell">
-          <div class="range">
-            <div class="cell-md-10 cell-lg-8">
-              <h2>Niñas de primer año concientizan sobre el embarazo en la adolescencia</h2>
-              <figure class="figure-light"><img class="img-centered" src="/images/perf.jpeg" alt="" width="770" height="485"/>
-                <figcaption>
-                  <p>Lic. Adan S.</p>
-                </figcaption>
+          <article class="article-section">
+            <h1 class="article-title">Niñas de primer año concientizan sobre el embarazo en la adolescencia</h1>
+            
+            <div class="article-content">
+              <figure class="figure-light">
+                <img class="img-centered article-img" src="/images/perf.jpeg" alt="Estudiantes durante su presentación sobre embarazo adolescente" width="770" height="485"/>
+                <figcaption>Estudiantes de primer año durante su exposición sobre embarazo adolescente</figcaption>
               </figure>
-              <p>El pasado miércoles 5 de marzo, las estudiantes de primer año llevaron a cabo una serie de exposiciones en los distintos cursos de la escuela con el objetivo de concienciar sobre el embarazo en la adolescencia. <br><br>Durante su recorrido, abordaron temas fundamentales como las causas, consecuencias y formas de prevenir esta situación que afecta a muchas jóvenes en nuestra sociedad. Con información clara y bien estructurada, captaron la atención de sus compañeros, generando un espacio de reflexión y discusión sobre la importancia de la educación sexual y la toma de decisiones responsables. <br><br>La iniciativa demostró el compromiso de las estudiantes con la concienciación y prevención de problemáticas sociales relevantes, fomentando un ambiente de aprendizaje y apoyo entre todos los cursos. Sin duda, estas actividades contribuyen a la formación integral de los alumnos y a la creación de una comunidad escolar informada y sensibilizada.</p>
+              
+              <p>El pasado miércoles 5 de marzo, las estudiantes de primer año del Liceo Adán Santana Sierra llevaron a cabo una serie de exposiciones en los distintos cursos de la escuela con el objetivo de concienciar sobre el embarazo en la adolescencia.</p>
+              
+              <div class="highlight-box">
+                <p>"La educación sexual es fundamental para prevenir el embarazo adolescente. Estas iniciativas estudiantiles demuestran el compromiso de nuestra comunidad con la formación integral de los jóvenes."</p>
+                <p><strong>- Lic. Adán S.</strong></p>
+              </div>
+              
+              <h2 class="section-title">Temas abordados</h2>
+              
+              <p>Durante su recorrido por las aulas, las estudiantes abordaron temas fundamentales como:</p>
+              
+              <ul>
+                <li><strong>Causas:</strong> Factores sociales, económicos y culturales del embarazo adolescente</li>
+                <li><strong>Consecuencias:</strong> Impacto en la salud, educación y proyecto de vida</li>
+                <li><strong>Prevención:</strong> Métodos anticonceptivos y toma de decisiones responsables</li>
+                <li><strong>Derechos sexuales y reproductivos:</strong> Información sobre legislación y servicios disponibles</li>
+              </ul>
+              
+              <h2 class="section-title">Impacto de la actividad</h2>
+              
+              <p>Con información clara y bien estructurada, las expositoras captaron la atención de sus compañeros, generando un espacio de reflexión y discusión sobre esta problemática social. La iniciativa demostró:</p>
+              
+              <ul>
+                <li>Compromiso de las estudiantes con problemáticas sociales relevantes</li>
+                <li>Capacidad de investigación y presentación de temas complejos</li>
+                <li>Fomento de un ambiente de aprendizaje entre pares</li>
+                <li>Sensibilización de la comunidad escolar sobre educación sexual</li>
+              </ul>
+              
+              <div class="video-section">
+                <div class="thumb-video">
+                  <a href="/images/Concientizacion.mp4">
+                    <img src="/images/perf.jpeg" alt="Video de la concientización sobre embarazo adolescente" width="770" height="485"/>
+                    <div class="thumb-video__overlay">
+                      <span class="icon fa-play"></span>
+                    </div>
+                  </a>
+                </div>
+                <h4 class="thumb-video__title">Estudiantes de 1ro A hablan sobre el embarazo en la adolescencia</h4>
+                <p>Video completo de la actividad de concientización</p>
+              </div>
+              
+              <p>Esta actividad contribuye a la formación integral de los alumnos y a la creación de una comunidad escolar informada y sensibilizada sobre temas de salud sexual y reproductiva, fortaleciendo los valores de responsabilidad y cuidado mutuo.</p>
             </div>
-          </div>
+          </article>
         </div>
       </section>
-
-      <!-- Image Left-->
-
-      <div class="cell-sm-6 cell-md-4">
-        <div class="thumb-video">
-          <a href="/images/Concientizacion.mp4">
-            <img src="/images/perf.jpeg" alt="Reportaje 2" width="400" height="225"/>
-            <div class="thumb-video__overlay">
-              <span class="icon fa-play"></span>
-            </div>
-          </a>
-        </div>
-        <h4 class="thumb-video__title">Estudiantes hablan sobre el embarazo en la adolecencia.</h4>
-        <p>1ro A.</p>
-      </div>
-
-      <!-- Image Right-->
 
       <!-- Page Footer-->
       <footer class="footer-centered section bg-gray-darker">
         <div class="shell">
           <div class="range range-sm-center">
             <div class="cell-sm-10 cell-md-8 cell-lg-6">
-              <!-- Brand--><a class="brand" href="index.html">
-                <div class="brand__name"><img src="/images/conocenos2.jpeg" alt="" width="237" height="35"/>
-                </div><span class="brand__slogan">Liceo Adan S.</span></a>
-                    <!-- RD Mailform-->
-                    <form class="rd-mailform form_inline" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
-                      <div class="form__inner">
-                        <div class="form-wrap">
-                          <input class="form-input" id="subscribe-form-footer-email" type="email" name="email" data-constraints="@Email @Required">
-                          <label class="form-label" for="subscribe-form-footer-email">Tu E-mail...</label>
-                        </div>
-                        <div class="form-button">
-                          <button class="button button-link" type="submit">Subscribete</button>
-                        </div>
-                      </div>
-                    </form>
+              <!-- Brand-->
+              <a class="brand footer-brand" href="index.html">
+                <div class="brand__name">
+                  <img src="/images/conocenos2.jpeg" alt="Liceo Adán Santana Sierra" width="237" height="35"/>
+                </div>
+                <span class="brand__slogan">Formando líderes del mañana</span>
+              </a>
+              
+              <!-- Newsletter Form -->
+              <form class="rd-mailform form_inline" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
+                <div class="form__inner">
+                  <div class="form-wrap">
+                    <input class="form-input" id="subscribe-form-footer-email" type="email" name="email" data-constraints="@Email @Required" placeholder="Tu correo electrónico">
+                  </div>
+                  <div class="form-button">
+                    <button class="button button-primary" type="submit">Suscríbete</button>
+                  </div>
+                </div>
+              </form>
+              
+              <!-- Social Media Links -->
               <ul class="list-icons list-inline-sm">
-                <li><a class="icon icon-sm fa fa-instagram icon-style-camera" href="#"><span></span><span></span><span></span><span></span></a></li>
-                <li><a class="icon icon-sm fa fa-facebook icon-style-camera" href="#"><span></span><span></span><span></span><span></span></a></li>
+                <li>
+                  <a class="icon icon-sm fa fa-instagram icon-style-camera" href="#">
+                    <span></span><span></span><span></span><span></span>
+                  </a>
+                </li>
+                <li>
+                  <a class="icon icon-sm fa fa-facebook icon-style-camera" href="https://www.facebook.com/profile.php?id=100082325281039">
+                    <span></span><span></span><span></span><span></span>
+                  </a>
+                </li>
+                <li>
+                  <a class="icon icon-sm fa fa-youtube icon-style-camera" href="#">
+                    <span></span><span></span><span></span><span></span>
+                  </a>
+                </li>
               </ul>
-              <!-- Rights-->
-              <p class="rights"><span>liceo Adan Santana Sierra</span><span>&nbsp;&copy;&nbsp; </span><span class="copyright-year"></span>.&nbsp; <br class="veil-xs"><a class="link-underline" href="#">Privacy Policy</a><span> Design&nbsp;by&nbsp;<a href="https://www.templatemonster.com">Jose Miguel Encarnacion</a></span></p>
+              
+              <!-- Copyright -->
+              <p class="rights">
+                <span>Liceo Adán Santana Sierra</span>
+                <span>&nbsp;&copy;&nbsp;</span>
+                <span class="copyright-year">2023</span>
+                <br class="veil-xs">
+                <a class="link-underline" href="#">Política de Privacidad</a>
+                <span> | </span>
+                <a class="link-underline" href="#">Términos de Uso</a>
+              </p>
             </div>
           </div>
         </div>
       </footer>
     </div>
-    <!-- Global Mailform Output-->
-    <div class="snackbars" id="form-output-global"></div>
+    
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
-
-
-

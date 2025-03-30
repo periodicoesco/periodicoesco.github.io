@@ -1,45 +1,125 @@
 <!DOCTYPE html>
-<html class="wide wow-animation" lang="en">
+<html class="wide wow-animation" lang="es">
   <head>
-    <!-- Site Title-->
-    <title>Noticias</title>
-    <meta name="format-detection" content="telephone=no">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Visita Inspiradora a la UNAD - Liceo Adán Santana</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic%7CJosefin+Sans:400,700,300italic">
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/style.css">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <style>
+        /* Estilos mejorados para noticias */
+        .news-article {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .news-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .news-title {
+            font-size: 2.5rem;
+            color: #2a4365;
+            margin-bottom: 20px;
+            line-height: 1.3;
+            font-weight: 700;
+        }
+        
+        .news-meta {
+            color: #6b7280;
+            margin-bottom: 30px;
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .news-hero {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .news-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #374151;
+            margin-bottom: 50px;
+        }
+        
+        .news-content p {
+            margin-bottom: 25px;
+        }
+        
+        .news-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 40px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .news-image-caption {
+            text-align: center;
+            color: #6b7280;
+            font-style: italic;
+            margin-top: -30px;
+            margin-bottom: 40px;
+            font-size: 0.9rem;
+        }
+        
+        .news-section {
+            margin-bottom: 50px;
+        }
+        
+        .news-section-title {
+            font-size: 1.8rem;
+            color: #1e40af;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .news-title {
+                font-size: 1.8rem;
+            }
+            
+            .news-hero {
+                height: 300px;
+            }
+            
+            .news-section-title {
+                font-size: 1.5rem;
+            }
+        }
+        
+        .ie-panel {
+            display: none;
+            background: #212121;
+            padding: 10px 0;
+            box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);
+            clear: both;
+            text-align:center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
+            display: block;
+        }
+    </style>
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-    <!-- Page Loader--
-      <div id="page-loader">
-        <div class="page-loader-body">
-          <div class="cssload-spinner">
-            <div class="cssload-cube cssload-cube0"></div>
-            <div class="cssload-cube cssload-cube1"></div>
-            <div class="cssload-cube cssload-cube2"></div>
-            <div class="cssload-cube cssload-cube3"></div>
-            <div class="cssload-cube cssload-cube4"></div>
-            <div class="cssload-cube cssload-cube5"></div>
-            <div class="cssload-cube cssload-cube6"> </div>
-            <div class="cssload-cube cssload-cube7"></div>
-            <div class="cssload-cube cssload-cube8"></div>
-            <div class="cssload-cube cssload-cube9"></div>
-            <div class="cssload-cube cssload-cube10"></div>
-            <div class="cssload-cube cssload-cube11"></div>
-            <div class="cssload-cube cssload-cube12"></div>
-            <div class="cssload-cube cssload-cube13"></div>
-            <div class="cssload-cube cssload-cube14"></div>
-            <div class="cssload-cube cssload-cube15"></div>
-          </div>
-        </div>
-      </div>
-    -->
+
     <!-- Page-->
     <div class="page">
       <!-- Page header-->
@@ -83,72 +163,80 @@
         </div>
       </header>
 
-      <!-- Breadcrumbs-->
-      <section class="breadcrumbs-custom bg-image" style="background-image: url(https://www.unad.edu.do/wp-content/uploads/2023/09/Frente-unad.jpg);">
+      <!-- Hero Image -->
+      <section class="breadcrumbs-custom bg-image" style="background-image: url('/images/noticia2.jpeg'); background-position: center;">
         <div class="shell">
-          <h1 class="breadcrumbs-custom__title">Noticias</h1>
+          <h1 class="breadcrumbs-custom__title">Visita a la UNAD</h1>
           <ul class="breadcrumbs-custom__path">
-            <li><a href="/index.html">Home</a></li>
-            <li class="active">Noticias</li>
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="/noticias.html">Noticias</a></li>
+            <li class="active">Visita UNAD</li>
           </ul>
         </div>
       </section>
-      <!-- Base typography-->
+
+      <!-- Contenido de la Noticia -->
       <section class="section section-md bg-white">
         <div class="shell">
-          <div class="range range-50">
-            <div class="cell-md-10 cell-lg-8">
-              <ul class="list-xl">
-                <li>
-                  <p><img src="/images/noticia2.jpeg" alt="" width="770" height="485"/>El pasado 29 de Enero, los estudiantes de 6to curso tuvieron la oportunidad de visitar la Universidad (UNAD), donde fueron recibidos con gran entusiasmo por parte de autoridades, docentes y estudiantes de la institución.</p>
-                    <p></p>
-                </li>
+          <article class="news-article">
+            <header class="news-header">
+              <h1 class="news-title">Una visita inspiradora a la Universidad Adventista Dominicana (UNAD)</h1>
+              <div class="news-meta">
+                <span class="news-date">Publicado el 29 de Enero, 2025</span>
+                <span class="news-author">Por Departamento de Comunicaciones</span>
+              </div>
+              <img src="/images/noticia2.jpeg" alt="Estudiantes del Liceo Adán Santana durante su visita a la UNAD" class="news-hero">
+            </header>
+            
+            <div class="news-content">
+              <p>El pasado 29 de enero, los estudiantes de 6to curso del Liceo Adán Santana Sierra vivieron una experiencia transformadora durante su visita a la Universidad Adventista Dominicana (UNAD), donde fueron recibidos con gran entusiasmo por autoridades, docentes y estudiantes de la prestigiosa institución.</p>
+              
+              <div class="news-section">
+                <h2 class="news-section-title">Un recibimiento cálido y motivador</h2>
+                <p>Desde el momento de su llegada, la calidez y hospitalidad de la comunidad UNAD hizo sentir a nuestros estudiantes como en casa. El recorrido incluyó:</p>
+                
+                <ul>
+                  <li>Visita a modernas aulas equipadas con tecnología de vanguardia</li>
+                  <li>Recorrido por bibliotecas con amplios recursos académicos</li>
+                  <li>Espacios dedicados a investigación y desarrollo profesional</li>
+                  <li>Áreas deportivas y de esparcimiento estudiantil</li>
+                </ul>
+                
+                <img src="/images/noticiaa2.jpeg" alt="Estudiantes conociendo las instalaciones de la UNAD" class="news-image">
+                <p class="news-image-caption">Nuestros estudiantes explorando las instalaciones académicas de la UNAD</p>
+              </div>
+              
+              <div class="news-section">
+                <h2 class="news-section-title">Charlas que inspiran el futuro</h2>
+                <p>Uno de los momentos más enriquecedores fue la participación en charlas motivacionales donde se destacó:</p>
+                
+                <blockquote style="background: #f8fafc; border-left: 4px solid #3b82f6; padding: 20px; margin: 30px 0; font-style: italic;">
+                  "La educación superior no es solo about conocimientos académicos, sino sobre formación integral y desarrollo de valores que transforman vidas y sociedades"
+                  <footer style="margin-top: 10px; font-weight: bold;">- Representante de la UNAD</footer>
+                </blockquote>
+                
+                <p>Estas experiencias no solo permitieron a nuestros estudiantes conocer de cerca el ambiente universitario, sino que también despertaron en muchos el deseo de continuar su formación en una institución que promueve la excelencia académica junto con valores cristianos.</p>
+                
+                <img src="/images/noticiaaa2.jpeg" alt="Estudiantes participando en charlas motivacionales" class="news-image">
+                <p class="news-image-caption">Jóvenes atentos durante las charlas informativas</p>
+              </div>
+              
+              <div class="news-section">
+                <h2 class="news-section-title">Una huella para el futuro</h2>
+                <p>La visita culminó con un acto de agradecimiento donde nuestros estudiantes expresaron su gratitud por la experiencia recibida. Como institución, extendemos nuestro reconocimiento a la UNAD por abrir sus puertas y brindar a nuestros jóvenes una experiencia que, sin duda, marcará positivamente su futuro educativo.</p>
+                
+                <div style="text-align: center; margin: 40px 0;">
+                  <img src="https://upload.wikimedia.org/wikipedia/en/1/1b/Logo_of_unad.png" alt="Logo UNAD" style="max-width: 300px; height: auto;">
+                  <p class="news-image-caption">Logo de la Universidad Adventista Dominicana</p>
+                </div>
+                
+                <p>Esta actividad refuerza nuestro compromiso como Liceo Adán Santana Sierra de proporcionar experiencias educativas enriquecedoras que trascienden las aulas y preparan a nuestros estudiantes para los desafíos del mañana.</p>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <!-- Image Centered-->
-      <section class="section section-md bg-white">
-        <div class="shell">
-          <div class="range">
-            <div class="cell-md-10 cell-lg-8">
-              <h2>El impacto de la visita en la motivación de los estudiantes.</h2>
-              <figure class="figure-light"><img class="img-centered" src="/images/noticiaa2.jpeg" alt="" width="770" height="485"/>
-                <figcaption>
-                  <p>UNAD</p>
-                </figcaption>
-              </figure>
-              <p>Desde el momento en que llegamos, la calidez y hospitalidad de la UNAD nos hicieron sentir como en casa. Durante el recorrido, los estudiantes conocieron las modernas instalaciones, incluyendo aulas equipadas con tecnología avanzada, bibliotecas llenas de recursos para el aprendizaje y espacios dedicados a la investigación y el desarrollo profesional.</p>
-            </div>
-          </div>
+          </article>
         </div>
       </section>
 
-      <!-- Image Left-->
-      <section class="section section-md bg-white">
-        <div class="shell">
-          <div class="range">
-            <div class="cell-md-10 cell-lg-8">
-              <h2></h2>
-              <p><img src="/images/noticiaaa2.jpeg" alt="" width="770" height="485"/>Además, los jóvenes participaron en charlas motivacionales donde se les explicó la importancia de la educación superior y cómo la UNAD ofrece oportunidades para su crecimiento académico y personal. Esta experiencia no solo les permitió conocer de cerca el ambiente universitario, sino que también despertó en muchos el deseo de continuar su formación en una institución que promueve el conocimiento y la excelencia.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Image Right-->
-      <section class="section section-md bg-white">
-        <div class="shell">
-          <div class="range">
-            <div class="cell-md-10 cell-lg-8">
-              <h2></h2>
-              <p><img class="img-right" src="https://upload.wikimedia.org/wikipedia/en/1/1b/Logo_of_unad.png" alt="" width="770" height="485"/>Agradecemos a la UNAD por abrir sus puertas y brindar a nuestros estudiantes una experiencia enriquecedora que, sin duda, dejará una huella en su futuro educativo.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
       <!-- Page Footer-->
       <footer class="footer-centered section bg-gray-darker">
         <div class="shell">

@@ -1,46 +1,281 @@
 <!DOCTYPE html>
-<html class="wide wow-animation" lang="en">
+<html class="wide wow-animation" lang="es">
   <head>
-    <!-- Site Title-->
-    <title>Noticias</title>
+    <title>Excursión a Puerto Plata | Liceo Adán Santana</title>
+    <meta name="description" content="Estudiantes del Liceo Adán Santana Sierra visitan los lugares emblemáticos de Puerto Plata">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <link rel="icon" href="/images/favicon.ico" type="/images/favicon.icon">
+    <meta name="author" content="Liceo Adán Santana Sierra">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic%7CJosefin+Sans:400,700,300italic">
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/style.css">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <style>
+      .ie-panel {
+        display: none;
+        background: #212121;
+        padding: 10px 0;
+        box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);
+        clear: both;
+        text-align:center;
+        position: relative;
+        z-index: 1;
+      }
+      
+      html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
+        display: block;
+      }
+      
+      /* Header Styles */
+      .page-header {
+        background: #fff;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        position: relative;
+        z-index: 1000;
+      }
+      
+      .rd-navbar-brand .brand__logo {
+        height: 35px;
+        width: auto;
+        max-width: 237px;
+      }
+      
+      .brand__slogan {
+        font-size: 0.8rem;
+        color: #666;
+        display: block;
+        margin-top: 5px;
+      }
+      
+      .rd-navbar-nav li a {
+        font-weight: 500;
+        color: #333;
+        transition: color 0.3s ease;
+      }
+      
+      .rd-navbar-nav li a:hover {
+        color: #e74c3c;
+      }
+      
+      .icon-style-camera {
+        color: #333;
+        transition: color 0.3s ease;
+      }
+      
+      .icon-style-camera:hover {
+        color: #e74c3c;
+      }
+      
+      /* Hero Section */
+      .breadcrumbs-custom {
+        background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/images/pp.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 100px 0;
+        color: white;
+        text-align: center;
+      }
+      
+      .breadcrumbs-custom__title {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+      }
+      
+      .breadcrumbs-custom__path {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        font-size: 1.1rem;
+      }
+      
+      .breadcrumbs-custom__path li {
+        margin: 0 10px;
+        position: relative;
+      }
+      
+      .breadcrumbs-custom__path li:not(:last-child):after {
+        content: ">";
+        margin-left: 15px;
+      }
+      
+      .breadcrumbs-custom__path li a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      
+      .breadcrumbs-custom__path li a:hover {
+        color: #e74c3c;
+      }
+      
+      .breadcrumbs-custom__path li.active {
+        color: #e74c3c;
+      }
+      
+      /* Article Styles */
+      .article-section {
+        padding: 60px 0;
+      }
+      
+      .article-title {
+        font-size: 2.2rem;
+        color: #2c3e50;
+        margin-bottom: 30px;
+        font-weight: 700;
+        line-height: 1.3;
+      }
+      
+      .article-content {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #333;
+      }
+      
+      .article-content p {
+        margin-bottom: 25px;
+      }
+      
+      .article-img {
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        margin: 30px 0;
+        max-width: 100%;
+        height: auto;
+        transition: transform 0.3s ease;
+      }
+      
+      .article-img:hover {
+        transform: scale(1.02);
+      }
+      
+      .img-right {
+        float: right;
+        margin-left: 30px;
+        margin-bottom: 20px;
+      }
+      
+      .img-centered {
+        display: block;
+        margin: 0 auto;
+      }
+      
+      .figure-light figcaption {
+        text-align: center;
+        color: #666;
+        font-style: italic;
+        margin-top: 10px;
+        font-size: 0.9rem;
+      }
+      
+      .section-title {
+        font-size: 1.8rem;
+        color: #e74c3c;
+        margin: 40px 0 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #eee;
+      }
+      
+      .highlight-box {
+        background: #f8f9fa;
+        border-left: 4px solid #e74c3c;
+        padding: 20px;
+        margin: 30px 0;
+        border-radius: 0 4px 4px 0;
+      }
+      
+      .destination-card {
+        margin-bottom: 50px;
+        padding: 20px;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      }
+      
+      /* Footer Styles */
+      .footer-centered {
+        background: #2c3e50;
+        color: #fff;
+        padding: 60px 0 30px;
+      }
+      
+      .footer-brand img {
+        max-width: 200px;
+        margin-bottom: 15px;
+      }
+      
+      .brand__slogan {
+        color: #ecf0f1;
+      }
+      
+      .form-input {
+        background: rgba(255,255,255,0.1);
+        border: none;
+        color: #fff;
+      }
+      
+      .form-input::placeholder {
+        color: #bdc3c7;
+      }
+      
+      .button-primary {
+        background: #e74c3c;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        transition: background 0.3s;
+      }
+      
+      .button-primary:hover {
+        background: #c0392b;
+      }
+      
+      .rights {
+        color: #bdc3c7;
+        font-size: 0.9rem;
+        margin-top: 30px;
+      }
+      
+      /* Responsive Styles */
+      @media (max-width: 768px) {
+        .breadcrumbs-custom__title {
+          font-size: 2rem;
+        }
+        
+        .article-title {
+          font-size: 1.8rem;
+        }
+        
+        .img-right {
+          float: none;
+          margin: 20px auto;
+          display: block;
+        }
+        
+        .breadcrumbs-custom__path {
+          flex-direction: column;
+          align-items: center;
+        }
+        
+        .breadcrumbs-custom__path li {
+          margin: 5px 0;
+        }
+        
+        .breadcrumbs-custom__path li:not(:last-child):after {
+          display: none;
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-    
-    <!-- Page Loader--
-      <div id="page-loader">
-        <div class="page-loader-body">
-          <div class="cssload-spinner">
-            <div class="cssload-cube cssload-cube0"></div>
-            <div class="cssload-cube cssload-cube1"></div>
-            <div class="cssload-cube cssload-cube2"></div>
-            <div class="cssload-cube cssload-cube3"></div>
-            <div class="cssload-cube cssload-cube4"></div>
-            <div class="cssload-cube cssload-cube5"></div>
-            <div class="cssload-cube cssload-cube6"> </div>
-            <div class="cssload-cube cssload-cube7"></div>
-            <div class="cssload-cube cssload-cube8"></div>
-            <div class="cssload-cube cssload-cube9"></div>
-            <div class="cssload-cube cssload-cube10"></div>
-            <div class="cssload-cube cssload-cube11"></div>
-            <div class="cssload-cube cssload-cube12"></div>
-            <div class="cssload-cube cssload-cube13"></div>
-            <div class="cssload-cube cssload-cube14"></div>
-            <div class="cssload-cube cssload-cube15"></div>
-          </div>
-        </div>
-      </div>
-    -->
 
     <!-- Page-->
     <div class="page">
@@ -55,26 +290,49 @@
                 <div class="rd-navbar-panel">
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a class="brand" href="index.html">
-                      <div class="brand__name"><img class="brand__logo-dark" src="images/logo-default-237x35.png" alt="" width="237" height="35"/><img class="brand__logo-light" src="images/logo-inverse-237x35.png" alt="" width="237" height="35"/>
-                      </div><span class="brand__slogan">Noticias Del centro</span></a></div>
+                  <div class="rd-navbar-brand">
+                    <a class="brand" href="/index.html">
+                      <div class="brand__name">
+                        <img class="brand__logo" src="/images/conocenos2.jpeg" alt="Liceo Adán Santana Sierra" width="237" height="35"/>
+                      </div>
+                      <span class="brand__slogan">Excelencia Educativa</span>
+                    </a>
+                  </div>
                 </div>
                 <!-- RD Navbar Nav-->
                 <div class="rd-navbar-nav-wrap">
                   <div class="rd-navbar-element">
                     <ul class="list-icons list-inline-sm">
-                      <li><a class="icon icon-sm fa fa-instagram icon-style-camera" href="#"><span></span><span></span><span></span><span></span></a></li>
-                      <li><a class="icon icon-sm fa fa-facebook icon-style-camera" href="https://www.facebook.com/profile.php?id=100082325281039"><span></span><span></span><span></span><span></span></a></li>
+                      <li>
+                        <a class="icon icon-sm fa fa-instagram icon-style-camera" href="#">
+                          <span></span><span></span><span></span><span></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="icon icon-sm fa fa-facebook icon-style-camera" href="https://www.facebook.com/profile.php?id=100082325281039">
+                          <span></span><span></span><span></span><span></span>
+                        </a>
+                      </li>
+                      <li>
+                        <a class="icon icon-sm fa fa-youtube icon-style-camera" href="#">
+                          <span></span><span></span><span></span><span></span>
+                        </a>
+                      </li>
                     </ul>
                   </div>
                   <!-- RD Navbar Nav-->
                   <ul class="rd-navbar-nav">
-                    <li><a href="/index.html">Home<span></span><span></span><span></span><span></span></a>
+                    <li>
+                      <a href="/index.html">Inicio<span></span><span></span><span></span><span></span></a>
                     </li>
-                    <li><a href="/about-me.html">Reportajes<span></span><span></span><span></span><span></span></a>
+                    <li>
+                      <a href="/about-me.html">Reportajes<span></span><span></span><span></span><span></span></a>
                     </li>
+                    <li class="active">
+                      <a href="/typography.html">Noticias<span></span><span></span><span></span><span></span></a>
                     </li>
-                    <li><a href="/contact-us.html">Contacto<span></span><span></span><span></span><span></span></a>
+                    <li>
+                      <a href="/contact-us.html">Contacto<span></span><span></span><span></span><span></span></a>
                     </li>
                   </ul>
                 </div>
@@ -84,147 +342,185 @@
         </div>
       </header>
 
-      <!-- Breadcrumbs-->
-      <section class="breadcrumbs-custom bg-image" style="background: url('/images/pp.jpg') no-repeat center center/cover;">
+      <!-- Hero Section -->
+      <section class="breadcrumbs-custom bg-image">
         <div class="shell">
-          <h1 class="breadcrumbs-custom__title">La novia del Atlántico.</h1>
+          <h1 class="breadcrumbs-custom__title">La Novia del Atlántico</h1>
           <ul class="breadcrumbs-custom__path">
-            <li><a href="/index.html">Home</a></li>
-            <li class="active">Noticias</li>
+            <li><a href="/index.html">Inicio</a></li>
+            <li class="active">Excursión a Puerto Plata</li>
           </ul>
         </div>
       </section>
-      <!-- Base typography-->
-      <section class="section section-md bg-white">
-        <div class="shell">
-          <div class="range range-50">
-            <div class="cell-md-10 cell-lg-8">
-              <ul class="list-xl">
-                <li>
-                  <h1>Puerto Plata</h1>
-                  <p><img class="img-right" src="/images/puertoP.jfif" alt="" width="770" height="485"/> El pasado 14 de marzo, los estudiantes de los grados 5to y 6to vivieron una emocionante excursión a la ciudad de Puerto Plata, un recorrido lleno de historia, cultura y paisajes impresionantes. Acompañados por sus maestros, los alumnos exploraron algunos de los lugares más emblemáticos de la provincia, aprendiendo sobre su valor histórico y disfrutando de la belleza que ofrece “La Novia del Atlántico”.</p>
-                  </li>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Image Centered-->
-      <section class="section section-md bg-white">
-        <div class="shell">
-          <div class="range">
-            <div class="cell-md-10 cell-lg-8">
-              <h2>Un inicio inesperado en el Teleférico</h2>
-              <figure class="figure-light"><img class="img-centered" src="/images/Teleferico.jfif" alt="" width="770" height="485"/>
-                <figcaption>
-                  <p>Teleferico de puerto plata.</p>
-                </figcaption>
-              </figure>
-              <p>El día comenzó con una gran expectativa en el Teleférico de Puerto Plata, uno de los atractivos turísticos más importantes de la República Dominicana. Este funicular, el único en el Caribe, transporta a sus visitantes hasta la cima del Pico Isabel de Torres, ofreciendo una vista espectacular de la ciudad y el océano Atlántico. Sin embargo, al llegar al lugar, el grupo se encontró con la noticia de que el teleférico estaba en mantenimiento, por lo que no pudieron vivir la experiencia de ascender a la montaña. Aunque esta sorpresa alteró los planes, los estudiantes mantuvieron el ánimo positivo y continuaron con entusiasmo el resto del recorrido.</p>
-            </div>
-          </div>
-        </div>
-      </section>
 
+      <!-- Main Content -->
       <section class="section section-md bg-white">
         <div class="shell">
-          <div class="range">
-            <div class="cell-md-10 cell-lg-8">
-              <h2>Descubriendo la capital de Puerto Plata.</h2>
-              <figure class="figure-light"><img class="img-centered" src="/images/capitalpp.jfif" alt="" width="770" height="485"/>
-                <figcaption>
-                  <p>Descubriendo la capital de Puerto Plata.</p>
-                </figcaption>
-              </figure>
-              <p>Tras dejar atrás el teleférico, los alumnos se dirigieron al centro de la ciudad de Puerto Plata, donde se respira historia y cultura en cada rincón. En este lugar, pudieron apreciar la arquitectura victoriana que caracteriza la zona, con sus casas de colores pastel y balcones de madera adornados con flores. También tuvieron la oportunidad de recorrer sus calles llenas de movimiento, donde el sonido de la música y la calidez de la gente hacen que cada paso sea una experiencia única.</p>
+          <article class="article-section">
+            <h1 class="article-title">Explorando Puerto Plata: Una aventura educativa</h1>
+            
+            <div class="article-content">
+              <img class="img-right article-img" src="/images/puertoP.jfif" alt="Vista panorámica de Puerto Plata" width="770" height="485"/>
+              
+              <p>El pasado 14 de marzo, los estudiantes de los grados 5to y 6to del Liceo Adán Santana Sierra vivieron una emocionante excursión a la ciudad de Puerto Plata, un recorrido lleno de historia, cultura y paisajes impresionantes. Acompañados por sus maestros, los alumnos exploraron algunos de los lugares más emblemáticos de la provincia, aprendiendo sobre su valor histórico y disfrutando de la belleza que ofrece "La Novia del Atlántico".</p>
+              
+              <div class="highlight-box">
+                <p>"Estas experiencias fuera del aula son fundamentales para que nuestros estudiantes conecten con la historia y cultura de nuestro país de una manera vivencial y memorable."</p>
+                <p><strong>- Lic. Adán S.</strong></p>
+              </div>
+              
+              <div class="destination-card">
+                <h2 class="section-title">Un inicio inesperado en el Teleférico</h2>
+                
+                <figure class="figure-light">
+                  <img class="img-centered article-img" src="/images/Teleferico.jfif" alt="Teleférico de Puerto Plata" width="770" height="485"/>
+                  <figcaption>Teleférico de Puerto Plata, único en el Caribe</figcaption>
+                </figure>
+                
+                <p>El día comenzó con gran expectativa en el Teleférico de Puerto Plata, uno de los atractivos turísticos más importantes de la República Dominicana. Este funicular, el único en el Caribe, transporta a sus visitantes hasta la cima del Pico Isabel de Torres, ofreciendo una vista espectacular de la ciudad y el océano Atlántico.</p>
+                
+                <p>Sin embargo, al llegar al lugar, el grupo se encontró con la noticia de que el teleférico estaba en mantenimiento. Aunque esta sorpresa alteró los planes iniciales, los estudiantes mantuvieron el ánimo positivo y continuaron con entusiasmo el resto del recorrido, demostrando adaptabilidad y buen espíritu.</p>
+              </div>
+              
+              <div class="destination-card">
+                <h2 class="section-title">Descubriendo la capital de Puerto Plata</h2>
+                
+                <figure class="figure-light">
+                  <img class="img-centered article-img" src="/images/capitalpp.jfif" alt="Centro histórico de Puerto Plata" width="770" height="485"/>
+                  <figcaption>Arquitectura victoriana en el centro de Puerto Plata</figcaption>
+                </figure>
+                
+                <p>Tras dejar atrás el teleférico, los alumnos se dirigieron al centro histórico de la ciudad, donde se respira historia y cultura en cada rincón. En este lugar, pudieron apreciar:</p>
+                
+                <ul>
+                  <li>La arquitectura victoriana característica de la zona</li>
+                  <li>Casas de colores pastel con balcones de madera adornados</li>
+                  <li>El ambiente cultural de sus calles llenas de movimiento</li>
+                  <li>La calidez de su gente y tradiciones</li>
+                </ul>
+              </div>
+              
+              <div class="destination-card">
+                <h2 class="section-title">La magia de la Calle Doña Blanca</h2>
+                
+                <img class="article-img" src="/images/calleblanca.jfif" alt="Calle Doña Blanca en Puerto Plata" width="770" height="485"/>
+                
+                <p>El tercer destino de la excursión fue la encantadora Calle Doña Blanca, un pequeño pasaje peatonal que se ha convertido en un símbolo de la ciudad. Con sus paredes y pasillos pintados de rosa, este lugar ofrece:</p>
+                
+                <ul>
+                  <li>Un ambiente tranquilo y armonioso</li>
+                  <li>Espacios ideales para fotografías</li>
+                  <li>Estética única y colorida</li>
+                  <li>Historia de restauración urbana</li>
+                </ul>
+                
+                <p>Los estudiantes aprendieron sobre la historia de este lugar y cómo ha sido restaurado para el disfrute de locales y turistas.</p>
+              </div>
+              
+              <div class="destination-card">
+                <h2 class="section-title">Colores y alegría en Umbrella Street</h2>
+                
+                <figure class="figure-light">
+                  <img class="img-centered article-img" src="/images/umbrellastreet.jfif" alt="Umbrella Street en Puerto Plata" width="770" height="485"/>
+                  <figcaption>Coloridas sombrillas en Umbrella Street</figcaption>
+                </figure>
+                
+                <p>A pocos pasos de la Calle Doña Blanca, los alumnos llegaron a la famosa Umbrella Street, una vía peatonal cubierta por decenas de coloridas sombrillas suspendidas en el aire. Este lugar representa:</p>
+                
+                <ul>
+                  <li>El esfuerzo de Puerto Plata por integrar el arte urbano</li>
+                  <li>Un punto ideal para la fotografía</li>
+                  <li>Un entorno acogedor con pequeños comercios</li>
+                  <li>Un ambiente vibrante y lleno de vida</li>
+                </ul>
+              </div>
+              
+              <div class="destination-card">
+                <h2 class="section-title">Un encuentro con la historia en la Fortaleza San Felipe</h2>
+                
+                <figure class="figure-light">
+                  <img class="img-centered article-img" src="/images/fortalezasf.png" alt="Fortaleza San Felipe en Puerto Plata" width="770" height="485"/>
+                  <figcaption>Imponente Fortaleza San Felipe</figcaption>
+                </figure>
+                
+                <p>El último destino de la excursión fue la imponente Fortaleza San Felipe, un monumento construido en el siglo XVI para proteger la ciudad de los ataques de piratas y corsarios. Durante la visita:</p>
+                
+                <ul>
+                  <li>Los estudiantes se sumergieron en la historia colonial</li>
+                  <li>Recorrieron pasillos y torres centenarias</li>
+                  <li>Escucharon relatos sobre batallas históricas</li>
+                  <li>Aprendieron sobre su uso como prisión en diferentes épocas</li>
+                </ul>
+                
+                <p>A pesar del contratiempo inicial con el teleférico, la excursión fue un éxito total. Los estudiantes regresaron a casa con nuevas experiencias, conocimientos y recuerdos inolvidables de un día lleno de aprendizaje y diversión en una de las ciudades más hermosas de República Dominicana.</p>
+              </div>
             </div>
-          </div>
+          </article>
         </div>
       </section>
-
-      <!-- Image Left-->
-      <section class="section section-md bg-white">
-        <div class="shell">
-          <div class="range">
-            <div class="cell-md-10 cell-lg-8">
-              <h2>La magia de la Calle Doña Blanca</h2>
-              <p><img src="/images/calleblanca.jfif" alt="" width="770" height="485"/>El tercer destino de la excursión fue la encantadora Calle Doña Blanca, un pequeño pasaje peatonal que se ha convertido en un símbolo de la ciudad. Con sus paredes y pasillos pintados de rosa, esta calle ofrece un ambiente tranquilo y armonioso, ideal para tomarse fotografías y disfrutar de su estética única. Además, los estudiantes aprendieron sobre la historia de este lugar y cómo ha sido restaurado para el disfrute de locales y turistas.</p></p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-md bg-white">
-        <div class="shell">
-          <div class="range">
-            <div class="cell-md-10 cell-lg-8">
-              <h2>Colores y alegría en Umbrella Street.</h2>
-              <figure class="figure-light"><img class="img-centered" src="/images/umbrellastreet.jfif" alt="" width="770" height="485"/>
-                <figcaption>
-                  <p>Umbrella Street.</p>
-                </figcaption>
-              </figure>
-              <p>A pocos pasos de la Calle Doña Blanca, los alumnos llegaron a la famosa Umbrella Street, una vía peatonal cubierta por decenas de coloridas sombrillas suspendidas en el aire. Este lugar, además de ser un punto ideal para la fotografía, representa el esfuerzo de Puerto Plata por integrar el arte en sus espacios urbanos. Mientras recorrían la calle, los estudiantes disfrutaron del ambiente vibrante del lugar, donde pequeños comercios y cafeterías crean un entorno acogedor y lleno de vida.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section-md bg-white">
-        <div class="shell">
-          <div class="range">
-            <div class="cell-md-10 cell-lg-8">
-              <h2>Un encuentro con la historia en la Fortaleza San Felipe.</h2>
-              <figure class="figure-light"><img class="img-centered" src="/images/fortalezasf.png" alt="" width="770" height="485"/>
-                <figcaption>
-                  <p>Fortaleza San felipe.</p>
-                </figcaption>
-              </figure>
-              <p>El último destino de la excursión fue la imponente Fortaleza San Felipe, un monumento construido en el siglo XVI para proteger la ciudad de los ataques de piratas y corsarios. Al entrar en sus muros de piedra, los estudiantes se sumergieron en la historia de Puerto Plata, recorriendo sus pasillos y torres mientras escuchaban relatos sobre las batallas que se libraron en este fuerte. También aprendieron que, en distintos momentos de la historia, la fortaleza sirvió como prisión, albergando a figuras importantes de la política y la guerra.<br><br>A pesar del contratiempo con el teleférico, la excursión fue un éxito total. Los estudiantes regresaron a casa con nuevas experiencias, conocimientos y recuerdos inolvidables de un día lleno de aprendizaje y diversión en una de las ciudades más hermosas de República Dominicana</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Image Right-->
 
       <!-- Page Footer-->
       <footer class="footer-centered section bg-gray-darker">
         <div class="shell">
           <div class="range range-sm-center">
             <div class="cell-sm-10 cell-md-8 cell-lg-6">
-              <!-- Brand--><a class="brand" href="index.html">
-                <div class="brand__name"><img src="/images/conocenos2.jpeg" alt="" width="237" height="35"/>
-                </div><span class="brand__slogan">Liceo Adan S.</span></a>
-                    <!-- RD Mailform-->
-                    <form class="rd-mailform form_inline" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
-                      <div class="form__inner">
-                        <div class="form-wrap">
-                          <input class="form-input" id="subscribe-form-footer-email" type="email" name="email" data-constraints="@Email @Required">
-                          <label class="form-label" for="subscribe-form-footer-email">Tu E-mail...</label>
-                        </div>
-                        <div class="form-button">
-                          <button class="button button-link" type="submit">Subscribete</button>
-                        </div>
-                      </div>
-                    </form>
+              <!-- Brand-->
+              <a class="brand footer-brand" href="index.html">
+                <div class="brand__name">
+                  <img src="/images/conocenos2.jpeg" alt="Liceo Adán Santana Sierra" width="237" height="35"/>
+                </div>
+                <span class="brand__slogan">Formando líderes del mañana</span>
+              </a>
+              
+              <!-- Newsletter Form -->
+              <form class="rd-mailform form_inline" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
+                <div class="form__inner">
+                  <div class="form-wrap">
+                    <input class="form-input" id="subscribe-form-footer-email" type="email" name="email" data-constraints="@Email @Required" placeholder="Tu correo electrónico">
+                  </div>
+                  <div class="form-button">
+                    <button class="button button-primary" type="submit">Suscríbete</button>
+                  </div>
+                </div>
+              </form>
+              
+              <!-- Social Media Links -->
               <ul class="list-icons list-inline-sm">
-                <li><a class="icon icon-sm fa fa-instagram icon-style-camera" href="#"><span></span><span></span><span></span><span></span></a></li>
-                <li><a class="icon icon-sm fa fa-facebook icon-style-camera" href="#"><span></span><span></span><span></span><span></span></a></li>
+                <li>
+                  <a class="icon icon-sm fa fa-instagram icon-style-camera" href="#">
+                    <span></span><span></span><span></span><span></span>
+                  </a>
+                </li>
+                <li>
+                  <a class="icon icon-sm fa fa-facebook icon-style-camera" href="https://www.facebook.com/profile.php?id=100082325281039">
+                    <span></span><span></span><span></span><span></span>
+                  </a>
+                </li>
+                <li>
+                  <a class="icon icon-sm fa fa-youtube icon-style-camera" href="#">
+                    <span></span><span></span><span></span><span></span>
+                  </a>
+                </li>
               </ul>
-              <!-- Rights-->
-              <p class="rights"><span>liceo Adan Santana Sierra</span><span>&nbsp;&copy;&nbsp; </span><span class="copyright-year"></span>.&nbsp; <br class="veil-xs"><a class="link-underline" href="#">Privacy Policy</a><span> Design&nbsp;by&nbsp;<a href="https://www.templatemonster.com">Jose Miguel Encarnacion</a></span></p>
+              
+              <!-- Copyright -->
+              <p class="rights">
+                <span>Liceo Adán Santana Sierra</span>
+                <span>&nbsp;&copy;&nbsp;</span>
+                <span class="copyright-year">2023</span>
+                <br class="veil-xs">
+                <a class="link-underline" href="#">Política de Privacidad</a>
+                <span> | </span>
+                <a class="link-underline" href="#">Términos de Uso</a>
+              </p>
             </div>
           </div>
         </div>
       </footer>
     </div>
-    <!-- Global Mailform Output-->
-    <div class="snackbars" id="form-output-global"></div>
+    
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
-
-
-

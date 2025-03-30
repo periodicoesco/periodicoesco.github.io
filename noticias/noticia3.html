@@ -1,168 +1,286 @@
 <!DOCTYPE html>
-<html class="wide wow-animation" lang="en">
+<html class="wide wow-animation" lang="es">
   <head>
     <!-- Site Title-->
-    <title>Noticias</title>
+    <title>Trimestre Patrio - Liceo Adán Santana Sierra</title>
+    <meta name="description" content="El Liceo Adán Santana Sierra celebra el inicio del Trimestre Patrio con actividades que honran la historia dominicana">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
+    <meta name="author" content="Liceo Adán Santana Sierra">
+    <meta name="date" content="2023-09-01">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    
     <!-- Stylesheets-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic%7CJosefin+Sans:400,700,300italic">
     <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/style.css">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <style>
+      .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} 
+      html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
+      
+      /* Mejoras adicionales */
+      .hero-section {
+        background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/images/noticiaa3.jpeg');
+        background-size: cover;
+        background-position: center;
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        color: white;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+      
+      .article-img {
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        margin: 1.5rem 0;
+        transition: transform 0.3s ease;
+      }
+      
+      .article-img:hover {
+        transform: scale(1.02);
+      }
+      
+      .highlight-quote {
+        border-left: 4px solid #e74c3c;
+        padding: 1.5rem;
+        margin: 2rem 0;
+        background: #f9f9f9;
+        font-style: italic;
+        font-size: 1.2rem;
+      }
+      
+      .article-meta {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        color: #666;
+        font-size: 0.9rem;
+      }
+      
+      .content-section {
+        line-height: 1.8;
+        font-size: 1.1rem;
+      }
+      
+      @media (max-width: 768px) {
+        .hero-section {
+          min-height: 50vh;
+        }
+        
+        .article-img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-    <!-- Page Loader--
-      <div id="page-loader">
-        <div class="page-loader-body">
-          <div class="cssload-spinner">
-            <div class="cssload-cube cssload-cube0"></div>
-            <div class="cssload-cube cssload-cube1"></div>
-            <div class="cssload-cube cssload-cube2"></div>
-            <div class="cssload-cube cssload-cube3"></div>
-            <div class="cssload-cube cssload-cube4"></div>
-            <div class="cssload-cube cssload-cube5"></div>
-            <div class="cssload-cube cssload-cube6"> </div>
-            <div class="cssload-cube cssload-cube7"></div>
-            <div class="cssload-cube cssload-cube8"></div>
-            <div class="cssload-cube cssload-cube9"></div>
-            <div class="cssload-cube cssload-cube10"></div>
-            <div class="cssload-cube cssload-cube11"></div>
-            <div class="cssload-cube cssload-cube12"></div>
-            <div class="cssload-cube cssload-cube13"></div>
-            <div class="cssload-cube cssload-cube14"></div>
-            <div class="cssload-cube cssload-cube15"></div>
-          </div>
-        </div>
-      </div>
-    -->
     <!-- Page-->
     <div class="page">
       <!-- Page header-->
-      <header class="section page-header">
-        <!-- RD Navbar-->
-        <div class="rd-navbar-wrap">
-          <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-sm-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-static" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static" data-lg-layout="rd-navbar-static" data-stick-up-clone="false" data-md-stick-up-offset="5px" data-lg-stick-up-offset="5px" data-md-stick-up="true" data-lg-stick-up="true">
-            <div class="rd-navbar-main-outer">
-              <div class="rd-navbar-main">
-                <!-- RD Navbar Panel-->
-                <div class="rd-navbar-panel">
-                  <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                  <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a class="brand" href="/index.html">
-                      <div class="brand__name"><img class="brand__logo-dark" src="/images/conocenos2.jpeg" alt="" width="237" height="35"/><img class="brand__logo-light" src="/images/conocenos2.jpeg" alt="" width="237" height="35"/>
-                      </div><span class="brand__slogan">Noticias Del centro</span></a></div>
+      <!-- Page header-->
+<header class="section page-header">
+  <!-- RD Navbar-->
+  <div class="rd-navbar-wrap">
+    <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-sm-device-layout="rd-navbar-fixed" data-md-layout="rd-navbar-static" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-static" data-lg-layout="rd-navbar-static" data-stick-up-clone="false" data-md-stick-up-offset="5px" data-lg-stick-up-offset="5px" data-md-stick-up="true" data-lg-stick-up="true">
+      <div class="rd-navbar-main-outer">
+        <div class="rd-navbar-main">
+          <!-- RD Navbar Panel-->
+          <div class="rd-navbar-panel">
+            <!-- Mobile Toggle Button -->
+            <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap">
+              <span></span>
+            </button>
+            
+            <!-- Logo y Nombre de la Institución -->
+            <div class="rd-navbar-brand">
+              <a class="brand" href="/index.html">
+                <div class="brand__name">
+                  <img class="brand__logo" src="/images/conocenos2.jpeg" alt="Liceo Adán Santana Sierra" width="237" height="35"/>
                 </div>
-                <!-- RD Navbar Nav-->
-                <div class="rd-navbar-nav-wrap">
-                  <div class="rd-navbar-element">
-                    <ul class="list-icons list-inline-sm">
-                      <li><a class="icon icon-sm fa fa-instagram icon-style-camera" href="#"><span></span><span></span><span></span><span></span></a></li>
-                      <li><a class="icon icon-sm fa fa-facebook icon-style-camera" href="https://www.facebook.com/profile.php?id=100082325281039"><span></span><span></span><span></span><span></span></a></li>
-                    </ul>
-                  </div>
-                  <!-- RD Navbar Nav-->
-                  <ul class="rd-navbar-nav">
-                    <li><a href="/index.html">Home<span></span><span></span><span></span><span></span></a>
-                    </li>
-                    <li><a href="/about-me.html">Reportajes<span></span><span></span><span></span><span></span></a>
-                    </li>
-                    </li>
-                    <li><a href="/contact-us.html">Contacto<span></span><span></span><span></span><span></span></a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+                <span class="brand__slogan">Excelencia Educativa</span>
+              </a>
             </div>
-          </nav>
+          </div>
+          
+          <!-- RD Navbar Nav-->
+          <div class="rd-navbar-nav-wrap">
+            <!-- Redes Sociales -->
+            <div class="rd-navbar-element">
+              <ul class="list-icons list-inline-sm">
+                <li>
+                  <a class="icon icon-sm fa fa-instagram icon-style-camera" href="#">
+                    <span></span><span></span><span></span><span></span>
+                  </a>
+                </li>
+                <li>
+                  <a class="icon icon-sm fa fa-facebook icon-style-camera" href="https://www.facebook.com/profile.php?id=100082325281039">
+                    <span></span><span></span><span></span><span></span>
+                  </a>
+                </li>
+                <li>
+                  <a class="icon icon-sm fa fa-youtube icon-style-camera" href="#">
+                    <span></span><span></span><span></span><span></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            
+            <!-- Menú Principal -->
+            <ul class="rd-navbar-nav">
+              <li>
+                <a href="/index.html">Inicio
+                  <span></span><span></span><span></span><span></span>
+                </a>
+              </li>
+              <li>
+                <a href="/about-me.html">Reportajes
+                  <span></span><span></span><span></span><span></span>
+                </a>
+              </li>
+              <li class="active">
+                <a href="/typography.html">Noticias
+                  <span></span><span></span><span></span><span></span>
+                </a>
+              </li>
+              <li>
+                <a href="/contact-us.html">Contacto
+                  <span></span><span></span><span></span><span></span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </header>
+      </div>
+    </nav>
+  </div>
+</header>
 
-      <!-- Breadcrumbs-->
-      <section class="breadcrumbs-custom bg-image" style="background-color: gray;">
+      <!-- Hero Section -->
+      <section class="hero-section">
         <div class="shell">
-          <h1 class="breadcrumbs-custom__title">Trimestre Patrio</h1>
-          <ul class="breadcrumbs-custom__path">
-            <li><a href="/index.html">Home</a></li>
-            <li class="active">Noticias</li>
-          </ul>
+          <div class="range range-center">
+            <div class="cell-md-10 cell-lg-8">
+              <h1 class="hero-title">Trimestre Patrio 2023</h1>
+              <p class="hero-subtitle">Celebrando nuestra identidad nacional</p>
+            </div>
+          </div>
         </div>
       </section>
-      <!-- Base typography-->
-      <section class="section section-md bg-white">
+
+      <!-- Main Content -->
+      <section class="section section-md bg-white content-section">
         <div class="shell">
           <div class="range range-50">
             <div class="cell-md-10 cell-lg-8">
-              <ul class="list-xl">
-                <li>
-                  <h1>Inicio del Trimestre Patrio en el Liceo Adán Santana Sierra.</h1>
-                  <p><img class="img-right" src="/images/noticia3.jpeg" alt="" width="770" height="485"/>Con gran entusiasmo, el Liceo Adán Santana Sierra dio inicio a la celebración del Trimestre Patrio, un período dedicado a resaltar nuestra historia, valores y el legado de los héroes que forjaron la independencia de la República Dominicana.</p>
-                  </li>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Image Centered-->
-      <section class="section section-md bg-white">
-        <div class="shell">
-          <div class="range">
-            <div class="cell-md-10 cell-lg-8">
-              <h2></h2>
-              <figure class="figure-light"><img class="img-centered" src="/images/noticiaa3.jpeg" alt="" width="770" height="485"/>
-                <figcaption>
-                  <p>Lic. Adan S.</p>
+              <div class="article-meta">
+                <span>Publicado: 1 de Septiembre, 2023</span>
+                <span>Autor: Departamento de Comunicaciones</span>
+              </div>
+              
+              <h2>Inicio del Trimestre Patrio en el Liceo Adán Santana Sierra</h2>
+              
+              <figure class="figure-light">
+                <img class="article-img" src="/images/noticia3.jpeg" alt="Estudiantes durante el acto de inicio del Trimestre Patrio" width="770" height="485"/>
+                <figcaption class="text-center">
+                  <p>Estudiantes participan en el acto inaugural del Trimestre Patrio</p>
                 </figcaption>
               </figure>
-              <p>En esta primera actividad, estudiantes y docentes se reunieron para recordar la importancia de nuestra identidad nacional. A través de discursos, presentaciones y reflexiones, se destacó el papel fundamental de los Padres de la Patria: Juan Pablo Duarte, Matías Ramón Mella y Francisco del Rosario Sánchez, así como los acontecimientos que marcaron el camino hacia nuestra independencia.
-
-                El acto de apertura sirvió como un espacio de aprendizaje y reflexión, motivando a los estudiantes a valorar y defender la soberanía de nuestro país. A lo largo del trimestre, se llevarán a cabo más actividades, incluyendo presentaciones artísticas, concursos y exposiciones que reforzarán el amor por nuestra nación. Este es solo el comienzo de una celebración significativa que busca fortalecer en nuestros jóvenes el orgullo patrio y el compromiso con la historia dominicana.</p>
+              
+              <p>Con gran entusiasmo, el Liceo Adán Santana Sierra dio inicio a la celebración del Trimestre Patrio, un período dedicado a resaltar nuestra historia, valores y el legado de los héroes que forjaron la independencia de la República Dominicana.</p>
+              
+              <div class="highlight-quote">
+                "Este trimestre es una oportunidad para reflexionar sobre nuestro pasado y fortalecer el compromiso con los valores patrios en las nuevas generaciones" - Lic. Adán S.
+              </div>
+              
+              <h3>Actividades destacadas</h3>
+              
+              <p>En esta primera actividad, estudiantes y docentes se reunieron para recordar la importancia de nuestra identidad nacional. A través de diversas actividades se destacó el papel fundamental de los Padres de la Patria:</p>
+              
+              <ul>
+                <li>Juan Pablo Duarte</li>
+                <li>Matías Ramón Mella</li>
+                <li>Francisco del Rosario Sánchez</li>
+              </ul>
+              
+              <p>Así como los acontecimientos que marcaron el camino hacia nuestra independencia.</p>
+              
+              <h3>Próximos eventos</h3>
+              
+              <p>El acto de apertura sirvió como un espacio de aprendizaje y reflexión, motivando a los estudiantes a valorar y defender la soberanía de nuestro país. A lo largo del trimestre, se llevarán a cabo más actividades que incluyen:</p>
+              
+              <ul>
+                <li>Presentaciones artísticas y culturales</li>
+                <li>Concursos de ensayos históricos</li>
+                <li>Exposiciones sobre símbolos patrios</li>
+              </ul>
+              
+              <figure class="figure-light">
+                <img class="article-img img-centered" src="/images/noticiaa3.jpeg" alt="Lic. Adán S. durante el discurso inaugural" width="770" height="485"/>
+                <figcaption class="text-center">
+                  <p>Lic. Adán S. durante su discurso en el acto inaugural</p>
+                </figcaption>
+              </figure>
+              
+              <p>Este es solo el comienzo de una celebración significativa que busca fortalecer en nuestros jóvenes el orgullo patrio y el compromiso con la historia dominicana. El Trimestre Patrio culminará con una gran presentación que reunirá todas las actividades realizadas durante este período.</p>
             </div>
           </div>
         </div>
       </section>
-
-      <!-- Image Left-->
-
-
-      <!-- Image Right-->
 
       <!-- Page Footer-->
       <footer class="footer-centered section bg-gray-darker">
         <div class="shell">
           <div class="range range-sm-center">
             <div class="cell-sm-10 cell-md-8 cell-lg-6">
-              <!-- Brand--><a class="brand" href="index.html">
-                <div class="brand__name"><img src="/images/conocenos2.jpeg" alt="" width="237" height="35"/>
-                </div><span class="brand__slogan">love story photographer</span></a>
-                    <!-- RD Mailform-->
-                    <form class="rd-mailform form_inline" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
-                      <div class="form__inner">
-                        <div class="form-wrap">
-                          <input class="form-input" id="subscribe-form-footer-email" type="email" name="email" data-constraints="@Email @Required">
-                          <label class="form-label" for="subscribe-form-footer-email">Tu E-mail...</label>
-                        </div>
-                        <div class="form-button">
-                          <button class="button button-link" type="submit">Subscribete</button>
-                        </div>
-                      </div>
-                    </form>
+              <!-- Brand-->
+              <a class="brand" href="index.html">
+                <div class="brand__name">
+                  <img src="/images/conocenos2.jpeg" alt="Liceo Adán Santana Sierra" width="237" height="35"/>
+                </div>
+                <span class="brand__slogan">Formando líderes para el futuro</span>
+              </a>
+              
+              <!-- Newsletter -->
+              <form class="rd-mailform form_inline" data-form-output="form-output-global" data-form-type="subscribe" method="post" action="bat/rd-mailform.php">
+                <div class="form__inner">
+                  <div class="form-wrap">
+                    <input class="form-input" id="subscribe-form-footer-email" type="email" name="email" data-constraints="@Email @Required" placeholder="Tu correo electrónico">
+                  </div>
+                  <div class="form-button">
+                    <button class="button button-primary" type="submit">Suscríbete</button>
+                  </div>
+                </div>
+              </form>
+              
+              <!-- Social Media -->
               <ul class="list-icons list-inline-sm">
                 <li><a class="icon icon-sm fa fa-instagram icon-style-camera" href="#"><span></span><span></span><span></span><span></span></a></li>
-                <li><a class="icon icon-sm fa fa-facebook icon-style-camera" href="#"><span></span><span></span><span></span><span></span></a></li>
+                <li><a class="icon icon-sm fa fa-facebook icon-style-camera" href="https://www.facebook.com/profile.php?id=100082325281039"><span></span><span></span><span></span><span></span></a></li>
+                <li><a class="icon icon-sm fa fa-twitter icon-style-camera" href="#"><span></span><span></span><span></span><span></span></a></li>
+                <li><a class="icon icon-sm fa fa-youtube icon-style-camera" href="#"><span></span><span></span><span></span><span></span></a></li>
               </ul>
+              
               <!-- Rights-->
-              <p class="rights"><span>liceo Adan Santana Sierra</span><span>&nbsp;&copy;&nbsp; </span><span class="copyright-year"></span>.&nbsp; <br class="veil-xs"><a class="link-underline" href="#">Privacy Policy</a><span> Design&nbsp;by&nbsp;<a href="https://www.templatemonster.com">Jose Miguel Encarnacion</a></span></p>
+              <p class="rights">
+                <span>Liceo Adán Santana Sierra</span>
+                <span>&nbsp;&copy;&nbsp;</span>
+                <span class="copyright-year">2023</span>.&nbsp;
+                <br class="veil-xs">
+                <a class="link-underline" href="#">Política de Privacidad</a>
+                <span> | </span>
+                <a class="link-underline" href="#">Términos de Uso</a>
+              </p>
             </div>
           </div>
         </div>
       </footer>
     </div>
-    <!-- Global Mailform Output-->
-    <div class="snackbars" id="form-output-global"></div>
+    
     <!-- Javascript-->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
