@@ -11,10 +11,134 @@
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic%7CJosefin+Sans:400,700,300italic">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
-    <style>.ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;} html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}</style>
+    <style>
+      /* FONDO SEMI-TRANSPARENTE PARA NAVBAR */
+/* --- Barra transparente al inicio --- */
+.rd-navbar {
+  z-index: 1000 important!;
+  background-color: transparent !important;
+  transition: all 0.5s ease !important; /* Suaviza el efecto */
+}
+
+/* --- Fondo con imagen semi-transparente --- */
+.rd-navbar-wrap::before {
+  content: '';
+  position: fixed; /* Fijo para que no se mueva con el scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px; /* Altura de tu barra (ajusta si es necesario) */
+  background-color: hsla(199, 49%, 43%, 0.76);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/* --- Efecto al hacer scroll --- */
+.rd-navbar.rd-navbar--is-stuck {
+  background-color: rgba(255, 255, 255, 0.9) !important; /* Color al scrollear (blanco semi-transparente) */
+  backdrop-filter: blur(5px); /* Efecto "vidrio esmerilado" */
+}
+
+/* Estilos para la nueva sección de noticias */
+.news-column {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.news-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.news-image {
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.news-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.news-card:hover .news-image img {
+  transform: scale(1.05);
+}
+
+.news-content {
+  padding: 25px;
+}
+
+.news-meta {
+  color: #6b7280;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.news-title {
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  color: #1e40af;
+  line-height: 1.3;
+}
+
+.news-title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.news-title a:hover {
+  color: #1e3a8a;
+}
+
+.news-excerpt {
+  color: #4b5563;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .news-image {
+    height: 200px;
+  }
+  
+  .news-content {
+    padding: 20px;
+  }
+  
+  .news-title {
+    font-size: 1.2em;
+  }
+}
+/* --- Asegura que el texto sea legible --- */
+.rd-navbar-brand h1,
+.rd-navbar-nav a {
+  color: #000; /* Color del texto (ajusta según tu fondo) */
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8); /* Sombra para mejor contraste */
+}
+      /* Estilos originales */
+      .ie-panel{display: none;background: #212121;padding: 10px 0;box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);clear: both;text-align:center;position: relative;z-index: 1;}
+      html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {display: block;}
+    </style>
   </head>
   <body>
-    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="/images/random.jfif" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
     <!-- Page Loader-->
     <div id="page-loader">
       <div class="page-loader-body">
@@ -83,155 +207,142 @@
       <section class="section text-center">
       </section>
 
-      
-
       <!-- Noticias-->
-      <section class="section section-md bg-gray-lighter text-center">
-        <div class="shell">
-          <p class="heading-1">Noticias del centro</p>
-          <div class="range range-30">
-            <div class="cell-sm-6 cell-md-4 wow fadeInLeftSmall">
-              <!-- Post boxed-->
-              <article class="post-boxed">
-                <ul class="post-boxed__meta">
-                  <li>
-                    <time datetime="2019">Enero 29, 2025</time>
-                  </li>
-                </ul>
-                <div class="post-boxed__main">
-                  <h3 class="post-boxed__title"><a href="/noticias/noticia1.html">Una visita inspiradora a la UNAD (Univerdidad Adventista Dominicana)</a></h3>
-                  <p>El pasado 29 de Enero, los estudiantes de 6to curso tuvieron la oportunidad de visitar la Universidad (UNAD), donde...</p>
-                </div>
-              </article>
-            </div>
-            <div class="cell-sm-6 cell-md-4 wow fadeInLeftSmall" data-wow-delay=".15s">
-              <!-- Post boxed-->
-              <article class="post-boxed">
-                <ul class="post-boxed__meta">
-                  <li>
-                    <time datetime="2019">Enero 29, 2025</time>
-                  </li>
-                </ul>
-                <div class="post-boxed__main">
-                  <h3 class="post-boxed__title"><a href="/noticias/noticia2.html">Lanzamiento Oficial de la Promoción de 6to Grado del Liceo Adán Santana Sierra.</a></h3>
-                  <p>Celebracion del lanzamiento de la promocion de 6to grado bajo el nombre "Beaumount", marcando el inicio de una etapa inolvidable...</p>
-                </div>
-               
-              </article>
-            </div>
-            <div class="cell-sm-6 cell-md-4 wow fadeInLeftSmall" data-wow-delay=".3s">
-              <!-- Post boxed-->
-              <article class="post-boxed">
-                <ul class="post-boxed__meta">
-                  <li>
-                    <time datetime="2019">Desde 26 de enero hasta 30 de Marzo, 2025</time>
-                  </li>
-                </ul>
-                <div class="post-boxed__main">
-                  <h3 class="post-boxed__title"><a href="noticias/noticia3.html">Celebración del Trimestre Patrio en el Liceo Adán Santana Sierra.</a></h3>
-                  <p>Con gran entusiasmo, el Liceo Adán Santana Sierra dio inicio a la celebración del Trimestre Patrio, un período dedicado a resaltar nuestra historia, valores...</p>
-                </div>
-               
-              </article>
-            </div>
-            <div class="cell-sm-6 cell-md-4 wow fadeInLeftSmall" data-wow-delay=".15s">
-              <!-- Post boxed-->
-              <article class="post-boxed">
-                <ul class="post-boxed__meta">
-                  <li>
-                    <time datetime="2019">Nov 15, 2024</time>
-                  </li>
-                </ul>
-                <div class="post-boxed__main">
-                  <h3 class="post-boxed__title"><a href="/noticias/noticia4.html">Modelo de centro de las naciones unidas.</a></h3>
-                  <p>El Modelo de Naciones Unidas (MUN) es una simulación académica donde estudiantes representan a delegados de distintos países, debaten temas glob....</p>
-                </div>
-                
-              </article>
-            </div>
-            <div class="cell-sm-6 cell-md-4 wow fadeInLeftSmall" data-wow-delay=".15s">
-              <!-- Post boxed-->
-              <article class="post-boxed">
-                <ul class="post-boxed__meta">
-                  <li>
-                    <time datetime="2019">Febrero 14, 2025</time>
-                  </li>
-                </ul>
-                <div class="post-boxed__main">
-                  <h3 class="post-boxed__title"><a href="/noticias/noticia5.html">Celebracion del dia de San Valentin: Enamorate de la lectura
-                  </a></h3>
-                  <p>El pasado 14 de febrero, en el marco del Trimestre Patrio, nuestro liceo celebró con...</p>
-                </div>
-                
-              </article>
-            </div>
-            <!--Noti-->
-            <div class="cell-sm-6 cell-md-4 wow fadeInLeftSmall" data-wow-delay=".15s">
-              <!-- Post boxed-->
-              <article class="post-boxed">
-                <ul class="post-boxed__meta">
-                  <li>
-                    <time datetime="2019">Enero 29, 2025</time>
-                  </li>
-                </ul>
-                <div class="post-boxed__main">
-                  <h3 class="post-boxed__title"><a href="/noticias/noticia6.html">El embarazo en la adolescencia.</a></h3>
-                  <p>El pasado miércoles 5 de marzo, las estudiantes de primer año recorrieron los salones de clase con una misión importante: hablarnos sobre el embarazo en la adolescencia.</p>
-                </div>
-               
-              </article>
-            </div>
-            <!--Fin noti-->
+      <!-- Noticias-->
+<section class="section section-md bg-gray-lighter">
+  <div class="container">
+    <h2 class="heading-1 text-center mb-5">Noticias del centro</h2>
+    <div class="news-column">
 
-            <div class="cell-sm-6 cell-md-4 wow fadeInLeftSmall" data-wow-delay=".15s">
-              <!-- Post boxed-->
-              <article class="post-boxed">
-                <ul class="post-boxed__meta">
-                  <li>
-                    <time datetime="2019">Marzo 14, 2025</time>
-                  </li>
-                </ul>
-                <div class="post-boxed__main">
-                  <h3 class="post-boxed__title"><a href="/noticias/noticia7.html">Excursiones realizadas por 5to y 6to Grado.</a></h3>
-                  <p>Puerto Plata.El pasado 14 de marzo, los estudiantes de los grados 5to y 6to vivieron una emocionante excursión a la ciudad de Puerto Plata, un recorrido lleno de historia, cultura y paisajes impresionantes.</p>
-                </div>   
-              </article>
-            </div>
-            <!--Fin noti-->
-
-            <div class="cell-sm-6 cell-md-4 wow fadeInLeftSmall" data-wow-delay=".15s">
-              <!-- Post boxed-->
-              <article class="post-boxed">
-                <ul class="post-boxed__meta">
-                  <li>
-                    <time datetime="2019">Marzo 20, 2025</time>
-                  </li>
-                </ul>
-                <div class="post-boxed__main">
-                  <h3 class="post-boxed__title"><a href="/noticias/noticia8.html">La Francophonie : Un Monde de Diversité Culturelle et Linguistique.</a></h3>
-                  <p>Chaque 20 mars, des millions de personnes dans le monde entier célèbrent la Journée Internationale de la Francophonie, une date dédiée à la promotion de la langue française et des cultures qui partagent cette langue.</p>
-                </div>
-              </article>
-            </div>
-
-            <!-- Fin noti-->
-            <div class="cell-sm-6 cell-md-4 wow fadeInLeftSmall" data-wow-delay=".15s">
-              <!-- Post boxed-->
-              <article class="post-boxed">
-                <ul class="post-boxed__meta">
-                  <li>
-                    <time datetime="2019">Marzo 21, 2025</time>
-                  </li>
-                </ul>
-                <div class="post-boxed__main">
-                  <h3 class="post-boxed__title"><a href="/noticias/noticia9.html">Proyecto de reciclajes, artes aplicadas.</a></h3>
-                  <p>Estudiantes del Liceo Profesor Adán Santana realizan actividad sobre reciclaje y conciencia ambiental.</p>
-                </div>   
-              </article>
-            </div>
-          </div>
+      <!-- Noticia 1 -->
+      <article class="news-card wow fadeInUp">
+        <div class="news-image">
+          <img src="/images/und.jfif" alt="Visita UNAD" class="img-fluid">
         </div>
-      </section>
+        <div class="news-content">
+          <div class="news-meta">
+            <time>Enero 29, 2025</time>
+          </div>
+          <h3 class="news-title"><a href="/noticias/noticia1.html">Una visita inspiradora a la UNAD (Universidad Adventista Dominicana)</a></h3>
+          <p class="news-excerpt">El pasado 29 de Enero, los estudiantes de 6to curso tuvieron la oportunidad de visitar la Universidad (UNAD), donde...</p>
+        </div>
+      </article>
+
+      <!-- Noticia 2 -->
+      <article class="news-card wow fadeInUp">
+        <div class="news-image">
+          <img src="/images/beuue.jfif" alt="Lanzamiento promoción" class="img-fluid">
+        </div>
+        <div class="news-content">
+          <div class="news-meta">
+            <time>Enero 29, 2025</time>
+          </div>
+          <h3 class="news-title"><a href="/noticias/noticia2.html">Lanzamiento Oficial de la Promoción de 6to Grado del Liceo Adán Santana Sierra.</a></h3>
+          <p class="news-excerpt">Celebracion del lanzamiento de la promocion de 6to grado bajo el nombre "Beaumount", marcando el inicio de una etapa inolvidable...</p>
+        </div>
+      </article>
+
+      <!-- Noticia 3 -->
+      <article class="news-card wow fadeInUp">
+        <div class="news-image">
+          <img src="/images/mdlptr.jfif" alt="Trimestre Patrio" class="img-fluid">
+        </div>
+        <div class="news-content">
+          <div class="news-meta">
+            <time>Desde 26 de enero hasta 30 de Marzo, 2025</time>
+          </div>
+          <h3 class="news-title"><a href="noticias/noticia3.html">Celebración del Trimestre Patrio en el Liceo Adán Santana Sierra.</a></h3>
+          <p class="news-excerpt">Con gran entusiasmo, el Liceo Adán Santana Sierra dio inicio a la celebración del Trimestre Patrio, un período dedicado a resaltar nuestra historia, valores...</p>
+        </div>
+      </article>
+
+      <!-- Noticia 4 -->
+      <article class="news-card wow fadeInUp">
+        <div class="news-image">
+          <img src="/images/mdlo.jfif" alt="Modelo ONU" class="img-fluid">
+        </div>
+        <div class="news-content">
+          <div class="news-meta">
+            <time>Nov 15, 2024</time>
+          </div>
+          <h3 class="news-title"><a href="/noticias/noticia4.html">Modelo de centro de las naciones unidas.</a></h3>
+          <p class="news-excerpt">El Modelo de Naciones Unidas (MUN) es una simulación académica donde estudiantes representan a delegados de distintos países, debaten temas glob....</p>
+        </div>
+      </article>
+
+      <!-- Noticia 5 -->
+      <article class="news-card wow fadeInUp">
+        <div class="news-image">
+          <img src="/images/sanv.jfif" alt="Día de San Valentín" class="img-fluid">
+        </div>
+        <div class="news-content">
+          <div class="news-meta">
+            <time>Febrero 14, 2025</time>
+          </div>
+          <h3 class="news-title"><a href="/noticias/noticia5.html">Celebracion del dia de San Valentin: Enamorate de la lectura</a></h3>
+          <p class="news-excerpt">El pasado 14 de febrero, en el marco del Trimestre Patrio, nuestro liceo celebró con...</p>
+        </div>
+      </article>
+
+      <!-- Noticia 6 -->
+      <article class="news-card wow fadeInUp">
+        <div class="news-image">
+          <img src="/images/emb.jfif" alt="Embarazo adolescente" class="img-fluid">
+        </div>
+        <div class="news-content">
+          <div class="news-meta">
+            <time>Enero 29, 2025</time>
+          </div>
+          <h3 class="news-title"><a href="/noticias/noticia6.html">El embarazo en la adolescencia.</a></h3>
+          <p class="news-excerpt">El pasado miércoles 5 de marzo, las estudiantes de primer año recorrieron los salones de clase con una misión importante: hablarnos sobre el embarazo en la adolescencia.</p>
+        </div>
+      </article>
+
+      <!-- Noticia 7 -->
+      <article class="news-card wow fadeInUp">
+        <div class="news-image">
+          <img src="/images/puesda.jfif" alt="Excursión Puerto Plata" class="img-fluid">
+        </div>
+        <div class="news-content">
+          <div class="news-meta">
+            <time>Marzo 14, 2025</time>
+          </div>
+          <h3 class="news-title"><a href="/noticias/noticia7.html">Excursiones realizadas por 5to y 6to Grado.</a></h3>
+          <p class="news-excerpt">Puerto Plata.El pasado 14 de marzo, los estudiantes de los grados 5to y 6to vivieron una emocionante excursión a la ciudad de Puerto Plata, un recorrido lleno de historia, cultura y paisajes impresionantes.</p>
+        </div>
+      </article>
+
+      <!-- Noticia 8 -->
+      <article class="news-card wow fadeInUp">
+        <div class="news-image">
+          <img src="/images/franjs.jfif" alt="Francophonie" class="img-fluid">
+        </div>
+        <div class="news-content">
+          <div class="news-meta">
+            <time>Marzo 20, 2025</time>
+          </div>
+          <h3 class="news-title"><a href="/noticias/noticia8.html">La Francophonie : Un Monde de Diversité Culturelle et Linguistique.</a></h3>
+          <p class="news-excerpt">Chaque 20 mars, des millions de personnes dans le monde entier célèbrent la Journée Internationale de la Francophonie, une date dédiée à la promotion de la langue française et des cultures qui partagent cette langue.</p>
+        </div>
+      </article>
+
+      <!-- Noticia 9 -->
+      <article class="news-card wow fadeInUp">
+        <div class="news-image">
+          <img src="/images/ecoasd.jfif" alt="Proyecto reciclaje" class="img-fluid">
+        </div>
+        <div class="news-content">
+          <div class="news-meta">
+            <time>Marzo 21, 2025</time>
+          </div>
+          <h3 class="news-title"><a href="/noticias/noticia9.html">Proyecto de reciclajes, artes aplicadas.</a></h3>
+          <p class="news-excerpt">Estudiantes del Liceo Profesor Adán Santana realizan actividad sobre reciclaje y conciencia ambiental.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
 
       <!-- Book Your Photo Shoot-->
       <section class="section section-md bg-white">
