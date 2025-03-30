@@ -992,3 +992,18 @@
 
 	} );
 }());
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector(".rd-mailform");
+    form.addEventListener("submit", function (event) {
+      event.preventDefault(); // Evita que el formulario se envíe de forma tradicional
+
+      const name = encodeURIComponent(form.querySelector("#contact-name").value);
+      const email = encodeURIComponent(form.querySelector("#contact-email").value);
+      const message = encodeURIComponent(form.querySelector("#contact-message").value);
+
+      const mailtoLink = `mailto:knethunter314@gmail.com?subject=Contacto desde el sitio web&body=Nombre: ${name}%0AEmail: ${email}%0AMensaje: ${message}`;
+      window.location.href = mailtoLink; // Abre el cliente de correo
+    });
+  });
