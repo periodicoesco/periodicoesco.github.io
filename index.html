@@ -2,11 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Para Daneyri Lisset</title>
     <style>
         body {
-            background: url('https://www.magnific.com/es/fotos-vectores-gratis/lirios-campo') no-repeat center center fixed;
+            background: url('https://images.unsplash.com/photo-1592177579178-577742dc34bf?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
             background-size: cover;
             font-family: 'Arial', sans-serif;
             text-align: center;
@@ -14,26 +14,27 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh;
+            height: 100vh; 
             margin: 0;
-            overflow: hidden;
+            overflow: hidden; 
             color: #fff;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
         }
         .contenedor {
             background: rgba(0, 0, 0, 0.5);
-            padding: 40px;
+            padding: 30px;
             border-radius: 20px;
             backdrop-filter: blur(8px);
             z-index: 10;
+            width: 80%; 
+            max-width: 500px;
         }
         h1 { 
-            font-size: 3em; 
+            font-size: 2.2em; 
             margin-bottom: 10px; 
         }
         .mensaje {
-            font-size: 1.5em;
-            max-width: 600px;
+            font-size: 1.2em;
             margin-top: 20px;
             display: none;
             animation: fadeIn 2s;
@@ -44,7 +45,7 @@
         }
         button {
             padding: 15px 30px;
-            font-size: 1.2em;
+            font-size: 1.1em;
             background-color: #ff4081;
             color: white;
             border: none;
@@ -73,11 +74,11 @@
 <body>
 
     <div class="contenedor">
-        <h1>Para mi hermosa Daneyri</h1>
+        <h1>Para mi hermosa Daneyri Lisset</h1>
         <button id="boton">Toca para tu sorpresa</button>
         <p class="mensaje" id="texto">
             Ni todos los campos de lirios del mundo se comparan con tu belleza. Te amo. ❤️<br><br>
-            <small style="font-size: 0.6em; color: #ddd;">(Haz clic en cualquier parte de la pantalla)</small>
+            <small style="font-size: 0.7em; color: #ddd;">(Toca la pantalla)</small>
         </p>
     </div>
 
@@ -85,7 +86,6 @@
         const boton = document.getElementById('boton');
         const texto = document.getElementById('texto');
 
-        // Botón inicial
         boton.addEventListener('click', (e) => {
             e.stopPropagation();
             texto.style.display = 'block';
@@ -93,9 +93,13 @@
             crearLirio(e.clientX, e.clientY);
         });
 
-        // Interacción: Clic crea flores
         window.addEventListener('click', (e) => {
             crearLirio(e.clientX, e.clientY);
+        });
+
+        window.addEventListener('touchstart', (e) => {
+            const toque = e.touches[0];
+            crearLirio(toque.clientX, toque.clientY);
         });
 
         function crearLirio(x, y) {
