@@ -6,8 +6,7 @@
     <title>Para Daneyri Lisset</title>
     <style>
         body {
-            /* Un fondo de internet porque claramente no la llevaste a un campo real */
-            background: url('https://images.unsplash.com/photo-1507914464560-63914020a597?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+            background: url('https://www.magnific.com/es/fotos-vectores-gratis/lirios-campo') no-repeat center center fixed;
             background-size: cover;
             font-family: 'Arial', sans-serif;
             text-align: center;
@@ -74,7 +73,7 @@
 <body>
 
     <div class="contenedor">
-        <h1>Para mi hermosa Daneyri Lisset</h1>
+        <h1>Para mi hermosa Daneyri</h1>
         <button id="boton">Toca para tu sorpresa</button>
         <p class="mensaje" id="texto">
             Ni todos los campos de lirios del mundo se comparan con tu belleza. Te amo. ❤️<br><br>
@@ -102,12 +101,11 @@
         function crearLirio(x, y) {
             const flor = document.createElement('div');
             flor.classList.add('flor-flotante');
-            flor.textContent = '💮'; // Tu lirio de bajo presupuesto
+            flor.textContent = '💮'; 
             
             flor.style.left = (x - 20) + 'px';
             flor.style.top = (y - 20) + 'px';
             
-            // Añadir un poco de aleatoriedad al tamaño
             const tamanoAleatorio = Math.random() * (3 - 1.5) + 1.5;
             flor.style.fontSize = tamanoAleatorio + 'em';
 
