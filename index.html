@@ -6,8 +6,10 @@
     <title>Para Daneyri Lisset</title>
     <style>
         body {
-            background-color: #f4fcf6;
-            font-family: 'Courier New', Courier, monospace;
+            /* Un fondo de internet porque claramente no la llevaste a un campo real */
+            background: url('https://images.unsplash.com/photo-1507914464560-63914020a597?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Arial', sans-serif;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -16,74 +18,105 @@
             height: 100vh;
             margin: 0;
             overflow: hidden;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
         }
-        h1 {
-            color: #2e7d32;
-            font-size: 3em;
-            margin-bottom: 10px;
+        .contenedor {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(8px);
+            z-index: 10;
         }
-        .lirio {
-            font-size: 5em;
-            cursor: pointer;
-            animation: flotar 3s ease-in-out infinite;
-        }
-        @keyframes flotar {
-            0%, 100% { transform: translateY(0) scale(1); }
-            50% { transform: translateY(-15px) scale(1.1); }
+        h1 { 
+            font-size: 3em; 
+            margin-bottom: 10px; 
         }
         .mensaje {
             font-size: 1.5em;
-            color: #1b5e20;
-            max-width: 80%;
+            max-width: 600px;
             margin-top: 20px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 1.5s ease;
+            display: none;
+            animation: fadeIn 2s;
         }
-        .mostrar {
-            opacity: 1;
-            transform: translateY(0);
+        @keyframes fadeIn { 
+            from { opacity: 0; } 
+            to { opacity: 1; } 
         }
         button {
-            margin-top: 20px;
-            padding: 10px 20px;
+            padding: 15px 30px;
             font-size: 1.2em;
-            background-color: #4caf50;
+            background-color: #ff4081;
             color: white;
             border: none;
-            border-radius: 8px;
+            border-radius: 50px;
             cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+            box-shadow: 0 4px 15px rgba(255, 64, 129, 0.4);
+            transition: transform 0.2s;
         }
-        button:hover {
-            background-color: #388e3c;
+        button:hover { 
+            transform: scale(1.1); 
+            background-color: #e91e63;
+        }
+        .flor-flotante {
+            position: absolute;
+            font-size: 2.5em;
+            animation: subir 4s linear forwards;
+            pointer-events: none;
+            z-index: 5;
+        }
+        @keyframes subir {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
         }
     </style>
 </head>
 <body>
 
-    <h1>Para Daneyri Lisset</h1>
-    <!-- El emoji más cercano a un lirio blanco que existe. Que use su imaginación. -->
-    <div class="lirio" id="flor">💮</div>
-    
-    <button id="boton">Toca el lirio</button>
-
-    <p class="mensaje" id="texto">
-        No hay código en el mundo que pueda programar lo mucho que te amo. Eres el lirio más hermoso de mi vida. 🤍
-    </p>
+    <div class="contenedor">
+        <h1>Para mi hermosa Daneyri Lisset</h1>
+        <button id="boton">Toca para tu sorpresa</button>
+        <p class="mensaje" id="texto">
+            Ni todos los campos de lirios del mundo se comparan con tu belleza. Te amo. ❤️<br><br>
+            <small style="font-size: 0.6em; color: #ddd;">(Haz clic en cualquier parte de la pantalla)</small>
+        </p>
+    </div>
 
     <script>
-        const flor = document.getElementById('flor');
         const boton = document.getElementById('boton');
         const texto = document.getElementById('texto');
 
-        function revelarAmor() {
-            texto.classList.add('mostrar');
+        // Botón inicial
+        boton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            texto.style.display = 'block';
             boton.style.display = 'none';
-        }
+            crearLirio(e.clientX, e.clientY);
+        });
 
-        flor.addEventListener('click', revelarAmor);
-        boton.addEventListener('click', revelarAmor);
+        // Interacción: Clic crea flores
+        window.addEventListener('click', (e) => {
+            crearLirio(e.clientX, e.clientY);
+        });
+
+        function crearLirio(x, y) {
+            const flor = document.createElement('div');
+            flor.classList.add('flor-flotante');
+            flor.textContent = '💮'; // Tu lirio de bajo presupuesto
+            
+            flor.style.left = (x - 20) + 'px';
+            flor.style.top = (y - 20) + 'px';
+            
+            // Añadir un poco de aleatoriedad al tamaño
+            const tamanoAleatorio = Math.random() * (3 - 1.5) + 1.5;
+            flor.style.fontSize = tamanoAleatorio + 'em';
+
+            document.body.appendChild(flor);
+            
+            setTimeout(() => {
+                flor.remove();
+            }, 4000);
+        }
     </script>
 
 </body>
